@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredMovies = [
-    { title: "Aarav or Kavya ka Pyar", genres: ["Sci-Fi", "Thriller"], rating: "4.9", image: "https://mega.nz/file/V2wHzAKL#dxJA3epJ5Zx-3INQYGoTEBg6og06S1ofe5bR241FxFc" },
-    { title: "Aryan Untold Story", genres: ["Adventure", "Drama"], rating: "4.7", image: "https://mega.nz/file/RiojDICK#0W9rK3OTTv6gJej5__GUibJEm-860DXbqErBr3bNG4k" },
-    { title: "The Danger Man- Story of Ghar Jamai", genres: ["Action", "Crime"], rating: "4.8", image: "https://mega.nz/file/tq5H0TLb#_9sIHyjWtJWFC4Bcp4tDjagWf8MqCWlJbAx8M9wDL0s" },
-    { title: "Priencess Marry to Poor Man", genres: ["Mystery", "Sci-Fi"], rating: "4.6", image: "https://mega.nz/file/xyohXLQR#ylNTnTD28qq5hqjPAAAtTrwxcnldo0wwrKgoStKhh2I" },
+    { title: "Neon Nights", genres: ["Sci-Fi", "Thriller"], rating: "4.9", image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=400&q=80" },
+    { title: "The Last Horizon", genres: ["Adventure", "Drama"], rating: "4.7", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" },
+    { title: "Cyber Heist", genres: ["Action", "Crime"], rating: "4.8", image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=400&q=80" },
+    { title: "Echoes of Time", genres: ["Mystery", "Sci-Fi"], rating: "4.6", image: "https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&w=400&q=80" },
   ];
 
   const mustWatch = [
