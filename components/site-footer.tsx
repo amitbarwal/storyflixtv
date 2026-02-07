@@ -30,6 +30,7 @@ export function SiteFooter() {
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
                             <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
+                            <li><Link href="/membership" className="hover:text-blue-400 transition-colors">Membership</Link></li>
                             <li><Link href="/movies" className="hover:text-blue-400 transition-colors">Movies</Link></li>
                             <li><Link href="/tv-shows" className="hover:text-blue-400 transition-colors">TV Shows</Link></li>
                         </ul>
@@ -63,7 +64,7 @@ export function SiteFooter() {
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>&copy; {currentYear} StoryFlix TV. All rights reserved.</p>
+                    <p>&copy; 2026 StoryFlix TV. Design by Next Gen Agency</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
                         <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>

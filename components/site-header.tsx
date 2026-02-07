@@ -11,6 +11,7 @@ export function SiteHeader() {
     const navLinks = [
         { name: 'Home', href: '/' },
         { name: 'About Us', href: '/about' },
+        { name: 'Membership', href: '/membership' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Privacy Policy', href: '/privacy-policy' },
     ];
