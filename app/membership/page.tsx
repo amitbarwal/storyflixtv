@@ -83,7 +83,7 @@ export default function MembershipPage() {
 
                 {/* Plans Grid */}
                 <div className="grid md:grid-cols-3 gap-8 items-start">
-                    {plans.map((plan, index) => (
+                    {plans.map((plan) => (
                         <div
                             key={plan.name}
                             className={`relative rounded-3xl p-8 backdrop-blur-sm border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${plan.popular ? 'bg-zinc-900/80 shadow-indigo-500/20 scale-105 z-10 border-indigo-500' : 'bg-white/5 border-white/10 hover:border-white/20'}`}
