@@ -19,22 +19,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://a2zmovie.com",
-    title: "a2zmovie | Instant Entertainment",
+    url: "https://storyflixtv.live",
+    title: "Story Flix Tv | Instant Entertainment",
     description: "Stream high-quality short movies and web series. Bite-sized entertainment for your busy lifestyle.",
-    siteName: "a2zmovie",
+    siteName: "StoryFlix TV",
     images: [
       {
         url: "/og-image.jpg", // We should probably ensure this exists or use a placeholder URL if we don't have one
         width: 1200,
         height: 630,
-        alt: "a2zmovie - Instant Entertainment",
+        alt: "StoryFlix TV - Instant Entertainment",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "a2zmovie | Your Ultimate Movie Destination",
+    title: "StoryFlix TV | Your Ultimate Movie Destination",
     description: "Discover the best short movies and web series.",
     images: ["/og-image.jpg"],
   },

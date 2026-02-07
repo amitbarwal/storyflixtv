@@ -1,11 +1,20 @@
-# Deploying a2zmovie to Vercel
+# Deploying StoryFlix TV Project
 
-Vercel is the creators of Next.js and provides the best deployment experience for Next.js applications.
+This guide provides instructions to deploy the StoryFlix TV Next.js application.
 
-## Prerequisites
+## 1. Prerequisites
 
-1.  A [Vercel Account](https://vercel.com/signup).
-2.  Your project code pushed to a Git provider (GitHub, GitLab, or Bitbucket).
+Ensure your project is pushed to a Git repository.
+
+```bash
+# Inside the storyflixtv directory (or root)
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <YOUR_REPOSITORY_URL>
+git push -u origin main
+```
 
 ## Step 1: Import Project
 

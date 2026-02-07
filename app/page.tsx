@@ -6,9 +6,9 @@ import { MovieCard } from '@/components/movie-card';
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Watch the latest short movies, web series, and reels. Instant entertainment on a2zmovie.",
+  description: "Watch the latest short movies, web series, and reels. Instant entertainment on StoryFlix TV.",
   openGraph: {
-    title: "Instant Entertainment, Anytime, Anywhere | a2zmovie",
+    title: "Instant Entertainment, Anytime, Anywhere | StoryFlix TV",
     description: "Watch high-quality short movies and series for just 2rs.",
   }
 };

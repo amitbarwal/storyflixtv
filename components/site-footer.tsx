@@ -63,7 +63,7 @@ export function SiteFooter() {
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>&copy; {currentYear} A2ZMovie. All rights reserved.</p>
+                    <p>&copy; {currentYear} StoryFlix TV. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
                         <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>

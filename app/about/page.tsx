@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { Film, Zap, Globe, Heart } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "About Us | a2zmovie",
-    description: "Learn more about a2zmovie, your destination for short movies, reels, and web series.",
+    title: "About Us | StoryFlix TV",
+    description: "Learn more about StoryFlix TV, your destination for short movies, reels, and web series.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
 
                 <div className="max-w-4xl mx-auto text-center space-y-6">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                        About <span className="text-indigo-400">A2Z</span>Movie
+                        About <span className="text-indigo-400">StoryFlix</span>TV
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                         Redefining entertainment for the modern era. We bring you the best stories in the shortest time.
@@ -30,7 +30,7 @@ export default function AboutPage() {
                     <div className="space-y-6">
                         <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
                         <p className="text-gray-300 leading-relaxed text-lg">
-                            A2ZMovie is a next-generation streaming platform designed for those who value their time but crave high-quality entertainment.
+                            StoryFlix TV is a next-generation streaming platform designed for those who value their time but crave high-quality entertainment.
                             In a world where attention spans are shrinking, we deliver impactful storytelling through bite-sized content.
                         </p>
                         <p className="text-gray-300 leading-relaxed text-lg">

@@ -1,6 +1,6 @@
 services:
-  a2zmovie:
-    image: a2zmovie
+  storyflixtv:
+    image: storyflixtv
     build:
       context: .
       dockerfile: ./Dockerfile
