@@ -13,7 +13,7 @@ export default function TermsPage() {
                 {/* Header */}
                 <div className="text-center space-y-4 border-b border-white/10 pb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Terms of Service</h1>
-                
+
                 </div>
 
                 {/* content */}
@@ -59,7 +59,7 @@ export default function TermsPage() {
                     <section>
                         <h2 className="text-2xl font-bold text-white mb-4">5. Disclaimer of Warranties</h2>
                         <p>
-                            StoryFlix TV is provided on an "as is" and "as available" basis. We do not guarantee that the service will be uninterrupted, error-free, or free from viruses.
+                            StoryFlix TV is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We do not guarantee that the service will be uninterrupted, error-free, or free from viruses.
                             We reserve the right to modify, suspend, or discontinue any part of the service at any time without notice.
                         </p>
                     </section>
