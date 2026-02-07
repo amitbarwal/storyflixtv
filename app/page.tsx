@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredMovies = [
-    { title: "Neon Nights", genres: ["Sci-Fi", "Thriller"], rating: "4.9", image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=400&q=80" },
-    { title: "The Last Horizon", genres: ["Adventure", "Drama"], rating: "4.7", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" },
-    { title: "Cyber Heist", genres: ["Action", "Crime"], rating: "4.8", image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=400&q=80" },
-    { title: "Echoes of Time", genres: ["Mystery", "Sci-Fi"], rating: "4.6", image: "https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&w=400&q=80" },
+    { title: "Aarav or Kavya ka Pyar", genres: ["Romance", "Drama"], rating: "4.8", image: "/movies/aarav-or-kavya-ka-pyar/cover.jpg" },
+    { title: "Ghar Jamai Se Haiwaan Bana Insaan", genres: ["Thriller", "Horror"], rating: "4.7", image: "/movies/ghar-jamai-se-haiwaan-bana-insaan/cover.jpg" },
+    { title: "Sangharsh Mein Bhi Pyar Zinda Raha", genres: ["Romance", "Drama"], rating: "4.9", image: "/movies/sangharsh-mein-bhi-pyar-zinda-raha/cover.jpg" },
+    { title: "Rajkumari Ki Shaadi Ek Bhikhari Se", genres: ["Period", "Drama"], rating: "4.6", image: "/movies/rajkumari-ki-shaadi-ek-bhikhari-se/cover.jpg" },
   ];
 
   const mustWatch = [
