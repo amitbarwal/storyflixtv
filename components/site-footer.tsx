@@ -66,7 +66,6 @@ export function SiteFooter() {
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
                         <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
-                        <Link href="/sitemap" className="hover:text-gray-300 transition-colors">Sitemap</Link>
                     </div>
                 </div>
             </div>
