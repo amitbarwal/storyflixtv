@@ -21,31 +21,6 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
   }
-
-  /* Safe area support for notched devices */
-  .safe-top {
-    padding-top: env(safe-area-inset-top);
-  }
-
-  .safe-bottom {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  /* Smooth animations */
-  .animate-in {
-    animation: fadeIn 0.3s ease-in;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 }
 
 html {
@@ -54,41 +29,4 @@ html {
 
 body {
   @apply bg-gray-950 text-white overflow-x-hidden;
-  /* Prevent pull-to-refresh on mobile */
-  overscroll-behavior-y: contain;
-}
-
-/* Improve touch targets for mobile */
-@media (max-width: 768px) {
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
-/* Disable text size adjustment on mobile */
-* {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-/* Better scrollbars */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
 }

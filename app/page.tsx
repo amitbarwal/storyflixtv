@@ -1,6 +1,5 @@
 import { Play, Star, Smartphone, Zap, Film, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import { MovieCard } from '@/components/movie-card';
@@ -16,10 +15,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredMovies = [
-    { title: "Aarav or Kavya ka Pyar", genres: ["Romance", "Drama"], rating: "4.8", image: "/movies/aarav-or-kavya-ka-pyar/cover.jpg" },
-    { title: "Ghar Jamai Se Haiwaan Bana Insaan", genres: ["Thriller", "Horror"], rating: "4.7", image: "/movies/ghar-jamai-se-haiwaan-bana-insaan/cover.jpg" },
-    { title: "Sangharsh Mein Bhi Pyar Zinda Raha", genres: ["Romance", "Drama"], rating: "4.9", image: "/movies/sangharsh-mein-bhi-pyar-zinda-raha/cover.jpg" },
-    { title: "Rajkumari Ki Shaadi Ek Bhikhari Se", genres: ["Period", "Drama"], rating: "4.6", image: "/movies/rajkumari-ki-shaadi-ek-bhikhari-se/cover.jpg" },
+    { title: "Neon Nights", genres: ["Sci-Fi", "Thriller"], rating: "4.9", image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=400&q=80" },
+    { title: "The Last Horizon", genres: ["Adventure", "Drama"], rating: "4.7", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" },
+    { title: "Cyber Heist", genres: ["Action", "Crime"], rating: "4.8", image: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=400&q=80" },
+    { title: "Echoes of Time", genres: ["Mystery", "Sci-Fi"], rating: "4.6", image: "https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&w=400&q=80" },
   ];
 
   const mustWatch = [
@@ -54,12 +53,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <Link href="/membership">
-              <Button className="h-14 px-8 text-lg rounded-full w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-xl shadow-indigo-500/25 border border-white/10">
-                <Play className="w-5 h-5 mr-3 fill-white" />
-                Free Membership
-              </Button>
-            </Link>
+            <Button className="h-14 px-8 text-lg rounded-full w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-xl shadow-indigo-500/25 border border-white/10">
+              <Play className="w-5 h-5 mr-3 fill-white" />
+              2rs Membership
+            </Button>
 
             <Button variant="glass" className="h-14 px-8 text-lg rounded-full w-full sm:w-auto text-gray-300 pointer-events-none opacity-80 backdrop-blur-md">
               <Smartphone className="w-5 h-5 mr-3" />
@@ -70,10 +67,10 @@ export default function Home() {
 
         {/* Background Decorative Elements */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[120px] -z-10" />
-      </section >
+      </section>
 
       {/* Featured Moves Section */}
-      < section className="py-12 px-6" >
+      <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
@@ -98,10 +95,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Must Watch Section */}
-      < section className="py-12 px-6" >
+      <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
@@ -142,8 +139,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
-    </div >
+    </div>
   );
 }

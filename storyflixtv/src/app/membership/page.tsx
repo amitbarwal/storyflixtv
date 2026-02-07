@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function MembershipPage() {
     const plans = [
         {
-            name: "Free Pack",
-            price: "₹2",
-            period: "/1st month",
-            description: "Experience premium for a month.",
+            name: "Weekly Pass",
+            price: "$2.99",
+            period: "/week",
+            description: "Perfect for a quick binge.",
             features: [
                 "Unlimited access to all stories",
                 "Ad-free experience",
@@ -26,7 +26,7 @@ export default function MembershipPage() {
         },
         {
             name: "Monthly Plan",
-            price: "₹399",
+            price: "$9.99",
             period: "/month",
             description: "Our most popular choice.",
             features: [
@@ -43,7 +43,7 @@ export default function MembershipPage() {
         },
         {
             name: "Yearly Plan",
-            price: "₹799",
+            price: "$79.99",
             period: "/year",
             description: "Best value for serious fans.",
             features: [
@@ -83,7 +83,7 @@ export default function MembershipPage() {
 
                 {/* Plans Grid */}
                 <div className="grid md:grid-cols-3 gap-8 items-start">
-                    {plans.map((plan) => (
+                    {plans.map((plan, index) => (
                         <div
                             key={plan.name}
                             className={`relative rounded-3xl p-8 backdrop-blur-sm border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${plan.popular ? 'bg-zinc-900/80 shadow-indigo-500/20 scale-105 z-10 border-indigo-500' : 'bg-white/5 border-white/10 hover:border-white/20'}`}
@@ -108,7 +108,7 @@ export default function MembershipPage() {
                                 <Button
                                     className={`w-full h-12 rounded-xl text-base font-semibold transition-all ${plan.popular ? 'bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-500/25' : 'bg-white/10 hover:bg-white/20 text-white border border-white/10'}`}
                                 >
-                                    Buy Now
+                                    Choose {plan.name}
                                 </Button>
 
                                 <div className="space-y-4 pt-4 border-t border-white/5">

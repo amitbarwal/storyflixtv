@@ -53,7 +53,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${outfit.className} antialiased bg-gray-950 text-white min-h-screen flex flex-col`}>
         <SiteHeader />
-        <main className="flex-grow pt-16 sm:pt-20">
+        <main className="flex-grow pt-20">
           {children}
         </main>
         <SiteFooter />
