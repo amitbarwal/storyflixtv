@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Search, X } from 'lucide-react';
+import { Menu, Search, X, Crown } from 'lucide-react';
 import { useState } from 'react';
+import { Button } from './ui/button';
 
 
 export function SiteHeader() {
@@ -10,9 +11,10 @@ export function SiteHeader() {
 
     const navLinks = [
         { name: 'Home', href: '/' },
+        { name: 'Movies', href: '/movies' },
+        { name: 'Membership', href: '/membership' },
         { name: 'About Us', href: '/about' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Privacy Policy', href: '/privacy-policy' },
+        { name: 'Terms', href: '/terms' },
     ];
 
     return (
@@ -47,6 +49,14 @@ export function SiteHeader() {
                             className="bg-transparent border-none focus:ring-0 text-sm ml-2 w-24 focus:w-40 transition-all placeholder-gray-500 text-white outline-none"
                         />
                     </div>
+
+                    {/* Join Membership Button */}
+                    <Link href="/membership" className="hidden sm:block">
+                        <Button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-none h-10 px-6">
+                            <Crown className="w-4 h-4 mr-2" />
+                            Join Membership
+                        </Button>
+                    </Link>
 
                     {/* Mobile Menu Button */}
                     <button
