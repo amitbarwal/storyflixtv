@@ -1,5 +1,6 @@
 import { Play, Star, Smartphone, Zap, Film, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import { MovieCard } from '@/components/movie-card';
@@ -53,10 +54,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <Button className="h-14 px-8 text-lg rounded-full w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-xl shadow-indigo-500/25 border border-white/10">
-              <Play className="w-5 h-5 mr-3 fill-white" />
-              2rs Membership
-            </Button>
+            <Link href="/membership" className="w-full sm:w-auto">
+              <Button className="h-14 px-8 text-lg rounded-full w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-xl shadow-indigo-500/25 border border-white/10">
+                <Play className="w-5 h-5 mr-3 fill-white" />
+                free Membership
+              </Button>
+            </Link>
 
             <Button variant="glass" className="h-14 px-8 text-lg rounded-full w-full sm:w-auto text-gray-300 pointer-events-none opacity-80 backdrop-blur-md">
               <Smartphone className="w-5 h-5 mr-3" />
