@@ -7,14 +7,15 @@ import { SiteFooter } from "@/components/site-footer";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://a2zmovie.com'), // Replace with actual domain when deployed
+
+  metadataBase: new URL('https://storyflixtv.com'), // Replace with actual domain when deployed
   title: {
-    default: "a2zmovie | Your Ultimate Movie Destination",
-    template: "%s | a2zmovie"
+    default: "StoryFlix TV | Premium Short Content",
+    template: "%s | StoryFlix TV"
   },
-  description: "Discover, explore, and find your next favorite movie with a2zmovie. Stream short movies, reels, and web series instantly.",
-  keywords: ["movies", "streaming", "short films", "web series", "entertainment", "reels", "a2zmovie"],
-  authors: [{ name: "a2zmovie Team" }],
+  description: "Discover, explore, and find your next favorite story with StoryFlix TV. Stream short movies, reels, and web series instantly.",
+  keywords: ["movies", "streaming", "short films", "web series", "entertainment", "reels", "storyflixtv"],
+  authors: [{ name: "StoryFlix TV Team" }],
   openGraph: {
     type: "website",
     locale: "en_US",

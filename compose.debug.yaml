@@ -1,0 +1,6 @@
+services:
+  a2zmovie:
+    image: a2zmovie
+    build:
+      context: .
+      dockerfile: ./Dockerfile

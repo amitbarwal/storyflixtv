@@ -20,7 +20,7 @@ export function SiteHeader() {
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold tracking-tighter cursor-pointer z-50">
-                    <span className="text-blue-500">A2Z</span><span className="text-white">Movie</span>
+                    <span className="text-white">StoryFlix</span><span className="text-blue-500">TV</span>
                 </Link>
 
                 {/* Desktop Navigation */}

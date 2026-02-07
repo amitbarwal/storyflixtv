@@ -11,10 +11,10 @@ export function SiteFooter() {
                     {/* Brand Column */}
                     <div className="space-y-4 col-span-1 md:col-span-1">
                         <Link href="/" className="text-2xl font-bold tracking-tighter">
-                            <span className="text-blue-500">A2Z</span><span className="text-white">Movie</span>
+                            <span className="text-white">StoryFlix</span><span className="text-blue-500">TV</span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Your ultimate destination for movies, TV shows, and entertainment news. Discover your next favorite story.
+                            Your ultimate destination for short movies, web series, and premium entertainment.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors"><Facebook className="w-5 h-5" /></a>
