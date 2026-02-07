@@ -13,7 +13,7 @@ export default function TermsPage() {
                 {/* Header */}
                 <div className="text-center space-y-4 border-b border-white/10 pb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Terms of Service</h1>
-                    <p className="text-lg text-gray-400">Last Updated: {new Date().toLocaleDateString()}</p>
+                
                 </div>
 
                 {/* content */}

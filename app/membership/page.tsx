@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function MembershipPage() {
     const plans = [
         {
-            name: "Starter Pack",
+            name: "Free Pack",
             price: "₹2",
-            period: "/day",
-            description: "Experience premium for a day.",
+            period: "/1st month",
+            description: "Experience premium for a month.",
             features: [
                 "Unlimited access to all stories",
                 "Ad-free experience",
