@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredMovies = [
-    { title: "Aarav or Kavya ka Pyar", genres: ["Romance", "Drama"], rating: "4.8", image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=400&q=80" },
-    { title: "Ghar Jamai Se Haiwaan Bana Insaan", genres: ["Thriller", "Horror"], rating: "4.7", image: "https://images.unsplash.com/photo-1509347528160-9a9e33742cd4?auto=format&fit=crop&w=400&q=80" },
-    { title: "Sangharsh Mein Bhi Pyar Zinda Raha", genres: ["Romance", "Drama"], rating: "4.9", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" },
-    { title: "Rajkumari Ki Shaadi Ek Bhikhari Se", genres: ["Period", "Drama"], rating: "4.6", image: "https://images.unsplash.com/photo-1478720568477-152d9b164e63?auto=format&fit=crop&w=400&q=80" },
+    { title: "Aarav or Kavya ka Pyar", genres: ["Romance", "Drama"], rating: "4.8", image: "/movies/aarav-or-kavya-ka-pyar/cover.jpg" },
+    { title: "Ghar Jamai Se Haiwaan Bana Insaan", genres: ["Thriller", "Horror"], rating: "4.7", image: "/movies/ghar-jamai-se-haiwaan-bana-insaan/cover.jpg" },
+    { title: "Sangharsh Mein Bhi Pyar Zinda Raha", genres: ["Romance", "Drama"], rating: "4.9", image: "/movies/sangharsh-mein-bhi-pyar-zinda-raha/cover.jpg" },
+    { title: "Rajkumari Ki Shaadi Ek Bhikhari Se", genres: ["Period", "Drama"], rating: "4.6", image: "/movies/rajkumari-ki-shaadi-ek-bhikhari-se/cover.jpg" },
   ];
 
   const mustWatch = [
