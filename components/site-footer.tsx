@@ -31,7 +31,6 @@ export function SiteFooter() {
                             <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
                             <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
                             <li><Link href="/movies" className="hover:text-blue-400 transition-colors">Movies</Link></li>
-                            <li><Link href="/tv-shows" className="hover:text-blue-400 transition-colors">TV Shows</Link></li>
                         </ul>
                     </div>
 
