@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { ConditionalLayout } from "@/components/conditional-layout";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -52,11 +51,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.className} antialiased bg-gray-950 text-white min-h-screen flex flex-col`}>
-        <SiteHeader />
-        <main className="flex-grow pt-20">
+        <ConditionalLayout>
           {children}
-        </main>
-        <SiteFooter />
+        </ConditionalLayout>
       </body>
     </html>
   );
