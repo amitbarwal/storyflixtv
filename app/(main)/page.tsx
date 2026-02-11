@@ -1,9 +1,9 @@
 import { Play, Star, Smartphone, Zap, Film, TrendingUp } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import { MovieCard } from '@/components/movie-card';
+import { movieData } from '@/lib/movieData';
 
 export const metadata: Metadata = {
   title: "Home",
@@ -15,19 +15,9 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const featuredMovies = [
-    { title: "Neon Nights", genres: ["Sci-Fi", "Thriller"], rating: "4.9", image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" },
-    { title: "The Last Horizon", genres: ["Adventure", "Drama"], rating: "4.7", image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=400&q=80" },
-    { title: "Cyber Heist", genres: ["Action", "Crime"], rating: "4.8", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80" },
-    { title: "Echoes of Time", genres: ["Mystery", "Sci-Fi"], rating: "4.6", image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=400&q=80" },
-  ];
-
-  const mustWatch = [
-    { title: "Urban Legends", genres: ["Horror", "Anthology"], rating: "4.9", image: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=400&q=80" },
-    { title: "Velocity", genres: ["Action", "Racing"], rating: "4.5", image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=400&q=80" },
-    { title: "Silent Deep", genres: ["Thriller", "Survival"], rating: "4.8", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" },
-    { title: "Love & Glitch", genres: ["Romance", "Comedy"], rating: "4.7", image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=400&q=80" },
-  ];
+  // Use the first 5 movies for featured and must watch sections
+  const featuredMovies = movieData;
+  const mustWatch = movieData;
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-gray-950 to-gray-950 text-white selection:bg-indigo-500/30 pb-20">
@@ -82,17 +72,18 @@ export default function Home() {
               </div>
               <h2 className="text-xl md:text-3xl font-bold text-white">Featured Movies</h2>
             </div>
-            <a href="#" className="hidden sm:inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">
+            <Link href="/movies" className="hidden sm:inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">
               View All <TrendingUp className="w-4 h-4 ml-1" />
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-6">
-            {featuredMovies.map((movie, i) => (
+            {featuredMovies.map((movie) => (
               <MovieCard
-                key={i}
+                key={movie.id}
+                id={movie.id}
                 title={movie.title}
-                imageUrl={movie.image}
+                imageUrl={movie.imageUrl}
                 genres={movie.genres}
               />
             ))}
@@ -113,32 +104,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-6">
-            {mustWatch.map((movie, i) => (
-              <div key={i} className="group relative">
-                <div className="aspect-[2/3] relative rounded-2xl overflow-hidden glass-card transition-all duration-300 group-hover:-translate-y-2  group-hover:shadow-pink-500/20 border-white/5">
-                  <Image
-                    src={movie.image}
-                    alt={movie.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/20 to-transparent opacity-90 transition-opacity duration-300" />
-
-                  <div className="absolute bottom-0 left-0 p-6 w-full">
-                    <h3 className="font-bold text-lg mb-1">{movie.title}</h3>
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <span className="text-pink-400 font-bold">{movie.rating} Rating</span>
-                      <span>•</span>
-                      <span>{movie.genres[0]}</span>
-                    </div>
-                  </div>
-
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Play className="w-12 h-12 text-white drop-shadow-lg" />
-                  </div>
-                </div>
-              </div>
+            {mustWatch.map((movie) => (
+              <MovieCard
+                key={movie.id}
+                id={movie.id}
+                title={movie.title}
+                imageUrl={movie.imageUrl}
+                genres={movie.genres}
+              />
             ))}
           </div>
         </div>

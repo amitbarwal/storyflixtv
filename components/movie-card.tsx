@@ -1,15 +1,17 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { Play } from 'lucide-react';
 
 interface MovieCardProps {
+    id: string;
     title: string;
     imageUrl: string;
     genres: string[];
 }
 
-export function MovieCard({ title, imageUrl, genres }: MovieCardProps) {
+export function MovieCard({ id, title, imageUrl, genres }: MovieCardProps) {
     return (
-        <div className="group relative cursor-pointer w-full">
+        <Link href={`/movies/${id}`} className="group relative cursor-pointer w-full block">
             {/* Card Image Container */}
             <div className="aspect-[2/3] relative rounded-xl overflow-hidden glass-card transition-all duration-300 md:group-hover:-translate-y-2 md:group-hover:shadow-2xl md:group-hover:shadow-blue-900/20 border-white/5">
                 {/* Placeholder background to reduce layout shift visual impact */}
@@ -51,6 +53,6 @@ export function MovieCard({ title, imageUrl, genres }: MovieCardProps) {
                     ))}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
