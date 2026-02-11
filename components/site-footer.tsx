@@ -6,7 +6,7 @@ export function SiteFooter() {
 
     return (
         <footer className="bg-black/40 border-t border-white/5 backdrop-blur-lg mt-auto">
-            <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand Column */}
                     <div className="space-y-4 col-span-1 md:col-span-1">

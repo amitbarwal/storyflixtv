@@ -1,25 +1,24 @@
-import { movieData, Movie } from '@/lib/movieData';
+import { movieData } from '@/lib/movieData';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Play, Star, Clock } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getYouTubeEmbedUrl } from '@/lib/utils';
 
 interface MoviePageProps {
     params: {
-        id: string; // Dynamic route parameter (folder name) is still [id], but we can treat it as slug or rename folder
+        id: string;
     };
 }
 
 export async function generateStaticParams() {
-    return movieData.map((movie: Movie) => ({
-        id: movie.slug, // We are pushing slugs into the [id] param
+    return movieData.map((movie) => ({
+        id: movie.id,
     }));
 }
 
 export async function generateMetadata({ params }: MoviePageProps): Promise<Metadata> {
-    const movie = movieData.find((m: Movie) => m.slug === params.id); // params.id holds the slug
+    const movie = movieData.find((m) => m.id === params.id);
     if (!movie) {
         return {
             title: 'Movie Not Found',
@@ -32,26 +31,22 @@ export async function generateMetadata({ params }: MoviePageProps): Promise<Meta
 }
 
 export default function MoviePage({ params }: MoviePageProps) {
-    const movie = movieData.find((m: Movie) => m.slug === params.id); // params.id holds the slug
+    const movie = movieData.find((m) => m.id === params.id);
 
     if (!movie) {
         notFound();
     }
 
     // Determine if video is an embed or direct file
-    const youtubeEmbedUrl = getYouTubeEmbedUrl(movie.videoUrl);
-    const isEmbed = !!youtubeEmbedUrl || movie.videoUrl.includes('vimeo.com');
-    const finalVideoUrl = youtubeEmbedUrl
-        ? `${youtubeEmbedUrl}?autoplay=1&mute=1&controls=1&rel=0`
-        : movie.videoUrl;
+    const isEmbed = movie.videoUrl.includes('youtube.com') || movie.videoUrl.includes('vimeo.com');
 
     return (
         <div className="min-h-screen bg-gray-950 text-white pb-20">
             {/* Hero Section with Video/Image */}
-            <div className="relative w-full aspect-video bg-black">
+            <div className="relative w-full aspect-video md:h-[70vh] max-h-[800px] bg-black">
                 {isEmbed ? (
                     <iframe
-                        src={`${finalVideoUrl}&playsinline=1`}
+                        src={movie.videoUrl}
                         title={movie.title}
                         className="w-full h-full object-cover"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -62,9 +57,6 @@ export default function MoviePage({ params }: MoviePageProps) {
                         src={movie.videoUrl}
                         poster={movie.imageUrl}
                         controls
-                        autoPlay
-                        muted
-                        playsInline
                         className="w-full h-full object-cover"
                     />
                 )}
@@ -112,7 +104,7 @@ export default function MoviePage({ params }: MoviePageProps) {
                         </div>
 
                         <div className="flex flex-wrap gap-2">
-                            {movie.genres.map((genre: string) => (
+                            {movie.genres.map((genre) => (
                                 <span
                                     key={genre}
                                     className="px-3 py-1 rounded-full bg-indigo-600/20 text-indigo-400 text-sm font-medium border border-indigo-500/20"

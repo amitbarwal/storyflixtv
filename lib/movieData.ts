@@ -2,11 +2,11 @@ export interface Movie {
     id: string;
     title: string;
     imageUrl: string;
+    videoUrl: string;
     genres: string[];
     description: string;
     rating?: string;
     duration?: string;
-    videoUrl: string;
     slug: string;
 }
 

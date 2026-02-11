@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import { Outfit } from "next/font/google";
+import "../globals.css";
+
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: 'StoryFlixTV Premium Membership – ₹2 Free Trial',
@@ -24,12 +28,10 @@ export default function VipLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="bg-black min-h-screen text-white">
-            {/* 
-        This layout intentionally does NOT include SiteHeader or SiteFooter.
-        It isolates the VIP page content for a distraction-free landing page experience.
-      */}
-            {children}
-        </div>
+        <html lang="en">
+            <body className={`${outfit.className} antialiased bg-black text-white min-h-screen`}>
+                {children}
+            </body>
+        </html>
     );
 }
