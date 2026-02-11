@@ -25,12 +25,12 @@ Files\nodejs/node_mo ...
  
 Failed to compile.
 
-./app/vip/page.tsx
-4:49  Error: 'Users' is 
+./app/page.tsx
+83:41  Error: 'i' is 
 defined but never used.  @t
 ypescript-eslint/no-unused-
 vars
-6:15  Error: 'Metadata' is 
+109:36  Error: 'i' is 
 defined but never used.  @t
 ypescript-eslint/no-unused-
 vars

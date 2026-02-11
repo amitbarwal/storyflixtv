@@ -1,0 +1,24 @@
+﻿On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   app/vip/page.tsx
+	deleted:    build_err.txt
+	deleted:    build_output.txt
+	deleted:    build_output_2.txt
+	deleted:    build_output_3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git_status.txt
+	public/Aarav or Kavya ka Pyar.jpg
+	public/Aryan Untold Story.jpg
+	public/King one sided love story.jpg
+	public/Priencess Marry to Poor Man.jpg
+	public/The Danger Man- Story of Ghar Jamai.jpg
+
+no changes added to commit (use "git add" and/or "git commit -a")

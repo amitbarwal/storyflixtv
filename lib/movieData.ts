@@ -7,87 +7,63 @@ export interface Movie {
     rating?: string;
     duration?: string;
     videoUrl: string;
+    slug: string;
 }
 
 export const movieData: Movie[] = [
     {
         id: "1",
-        title: "Love at First Swipe",
-        imageUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=400&q=80",
-        genres: ["Romance", "Comedy"],
-        description: "A modern love story about two strangers who match on a dating app and decide to meet for a blind date that goes hilariously wrong.",
-        rating: "4.8",
-        duration: "15m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title: "The Danger Man: Story of Ghar Jamai",
+        imageUrl: "/movies-cover/The Danger Man- Story of Ghar Jamai.jpg",
+        genres: ["Drama", "Action"],
+        description: "A gripping tale of sacrifice and survival. When a man moves in with his in-laws, he discovers a world of secrets and danger he never expected.",
+        rating: "4.9",
+        duration: "18m",
+        videoUrl: "https://youtu.be/7k1maBibvQ0",
+        slug: "the-danger-man-story-of-ghar-jamai"
     },
     {
         id: "2",
-        title: "The CEO's Secret",
-        imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80",
-        genres: ["Drama", "Thriller"],
-        description: "A young intern discovers a shocking secret about the charming CEO of a tech giant that could bring down the entire empire.",
-        rating: "4.9",
-        duration: "22m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title: "Aarav or Kavya ka Pyar",
+        imageUrl: "/movies-cover/Aarav or Kavya ka Pyar.jpg",
+        genres: ["Romance", "Drama"],
+        description: "A beautiful journey of two souls destined to be together. Despite the odds, their love finds a way to brighten the darkest days.",
+        rating: "4.8",
+        duration: "15m",
+        videoUrl: "https://youtube.com/shorts/VzB8ObrCIfs",
+        slug: "aarav-or-kavya-ka-pyar"
     },
     {
         id: "3",
-        title: "Midnight Delivery",
-        imageUrl: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
-        genres: ["Thriller", "Suspense"],
-        description: "A food delivery rider gets an unusual request to deliver a package to an abandoned address at midnight.",
+        title: "Aryan: Untold Story",
+        imageUrl: "/movies-cover/Aryan Untold Story.jpg",
+        genres: ["Action", "Biography"],
+        description: "The inspiring journey of a young man who fought against all odds to achieve his dreams. A story of grit, determination, and success.",
         rating: "4.7",
-        duration: "18m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        duration: "22m",
+        videoUrl: "https://youtube.com/shorts/MHt2zam6Lsc",
+        slug: "aryan-untold-story"
     },
     {
         id: "4",
-        title: "Office Romance",
-        imageUrl: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=400&q=80",
-        genres: ["Romance", "Drama"],
-        description: "Two rival colleagues competing for the same promotion find themselves falling for each other against company policy.",
+        title: "King: One Sided Love Story",
+        imageUrl: "/movies-cover/King one sided love story.jpg",
+        genres: ["Romance", "Musical"],
+        description: "Sometimes love is a solo journey. Follow the emotional path of a man who gives his all to someone who may never love him back.",
         rating: "4.6",
         duration: "20m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        videoUrl: "https://youtu.be/Tn0r_WyRw0I",
+        slug: "king-one-sided-love-story"
     },
     {
         id: "5",
-        title: "The Arranged Marriage",
-        imageUrl: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=400&q=80",
-        genres: ["Drama", "Family"],
-        description: "A touching story about a couple finding love and understanding in a marriage arranged by their traditional families.",
+        title: "Princess Marry to Poor Man",
+        imageUrl: "/movies-cover/Priencess Marry to Poor Man.jpg",
+        genres: ["Family", "Drama"],
+        description: "A classic tale of love crossing social boundaries. A princess chooses her heart over her crown in this touching family drama.",
         rating: "4.9",
         duration: "25m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-    },
-    {
-        id: "6",
-        title: "Campus Diaries",
-        imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400&q=80",
-        genres: ["Youth", "Comedy"],
-        description: "Follow a group of freshmen as they navigate friendship, exams, and first loves in their first year of college.",
-        rating: "4.5",
-        duration: "12m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-    },
-    {
-        id: "7",
-        title: "Hidden Talent",
-        imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80",
-        genres: ["Music", "Drama"],
-        description: "A shy street musician goes viral overnight but struggles to handle the sudden fame and pressure.",
-        rating: "4.8",
-        duration: "16m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-    },
-    {
-        id: "8",
-        title: "Startup Dreams",
-        imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
-        genres: ["Business", "Inspiration"],
-        description: "Three college dropouts try to pitch their crazy app idea to investors in Silicon Valley with only 24 hours to prepare.",
-        rating: "4.7",
-        duration: "20m",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        videoUrl: "https://youtu.be/j19Cl-n6Keg",
+        slug: "princess-marry-to-poor-man"
     }
 ];

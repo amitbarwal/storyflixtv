@@ -46,14 +46,12 @@ export default function VipPage() {
 
                     {/* Video Clip Section */}
                     <div className="w-full rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 aspect-video relative group bg-gray-900">
-                        <video
+                        <iframe
                             className="w-full h-full object-cover"
-                            src="/promo-clip.mp4"
-                            poster="/og-image.jpg"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
+                            src="https://www.youtube.com/embed/kntQeikX4r4?autoplay=1&mute=1&loop=1&playlist=kntQeikX4r4&controls=0&showinfo=0&rel=0"
+                            title="VIP Promo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pointer-events-none" />
 

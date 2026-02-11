@@ -4,21 +4,22 @@ import Link from 'next/link';
 import { ArrowLeft, Play, Star, Clock } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { getYouTubeEmbedUrl } from '@/lib/utils';
 
 interface MoviePageProps {
     params: {
-        id: string;
+        id: string; // Dynamic route parameter (folder name) is still [id], but we can treat it as slug or rename folder
     };
 }
 
 export async function generateStaticParams() {
     return movieData.map((movie: Movie) => ({
-        id: movie.id,
+        id: movie.slug, // We are pushing slugs into the [id] param
     }));
 }
 
 export async function generateMetadata({ params }: MoviePageProps): Promise<Metadata> {
-    const movie = movieData.find((m: Movie) => m.id === params.id);
+    const movie = movieData.find((m: Movie) => m.slug === params.id); // params.id holds the slug
     if (!movie) {
         return {
             title: 'Movie Not Found',
@@ -31,14 +32,18 @@ export async function generateMetadata({ params }: MoviePageProps): Promise<Meta
 }
 
 export default function MoviePage({ params }: MoviePageProps) {
-    const movie = movieData.find((m: Movie) => m.id === params.id);
+    const movie = movieData.find((m: Movie) => m.slug === params.id); // params.id holds the slug
 
     if (!movie) {
         notFound();
     }
 
     // Determine if video is an embed or direct file
-    const isEmbed = movie.videoUrl.includes('youtube.com') || movie.videoUrl.includes('vimeo.com');
+    const youtubeEmbedUrl = getYouTubeEmbedUrl(movie.videoUrl);
+    const isEmbed = !!youtubeEmbedUrl || movie.videoUrl.includes('vimeo.com');
+    const finalVideoUrl = youtubeEmbedUrl
+        ? `${youtubeEmbedUrl}?autoplay=1&mute=1&controls=1&rel=0`
+        : movie.videoUrl;
 
     return (
         <div className="min-h-screen bg-gray-950 text-white pb-20">
@@ -46,7 +51,7 @@ export default function MoviePage({ params }: MoviePageProps) {
             <div className="relative w-full aspect-video md:h-[70vh] max-h-[800px] bg-black">
                 {isEmbed ? (
                     <iframe
-                        src={movie.videoUrl}
+                        src={finalVideoUrl}
                         title={movie.title}
                         className="w-full h-full object-cover"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -57,6 +62,7 @@ export default function MoviePage({ params }: MoviePageProps) {
                         src={movie.videoUrl}
                         poster={movie.imageUrl}
                         controls
+                        autoPlay
                         className="w-full h-full object-cover"
                     />
                 )}
