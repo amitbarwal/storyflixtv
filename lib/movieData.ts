@@ -6,6 +6,7 @@ export interface Movie {
     description: string;
     rating?: string;
     duration?: string;
+    videoUrl: string;
 }
 
 export const movieData: Movie[] = [
@@ -16,7 +17,8 @@ export const movieData: Movie[] = [
         genres: ["Romance", "Comedy"],
         description: "A modern love story about two strangers who match on a dating app and decide to meet for a blind date that goes hilariously wrong.",
         rating: "4.8",
-        duration: "15m"
+        duration: "15m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "2",
@@ -25,7 +27,8 @@ export const movieData: Movie[] = [
         genres: ["Drama", "Thriller"],
         description: "A young intern discovers a shocking secret about the charming CEO of a tech giant that could bring down the entire empire.",
         rating: "4.9",
-        duration: "22m"
+        duration: "22m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "3",
@@ -34,7 +37,8 @@ export const movieData: Movie[] = [
         genres: ["Thriller", "Suspense"],
         description: "A food delivery rider gets an unusual request to deliver a package to an abandoned address at midnight.",
         rating: "4.7",
-        duration: "18m"
+        duration: "18m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "4",
@@ -43,7 +47,8 @@ export const movieData: Movie[] = [
         genres: ["Romance", "Drama"],
         description: "Two rival colleagues competing for the same promotion find themselves falling for each other against company policy.",
         rating: "4.6",
-        duration: "20m"
+        duration: "20m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "5",
@@ -52,7 +57,8 @@ export const movieData: Movie[] = [
         genres: ["Drama", "Family"],
         description: "A touching story about a couple finding love and understanding in a marriage arranged by their traditional families.",
         rating: "4.9",
-        duration: "25m"
+        duration: "25m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "6",
@@ -61,7 +67,8 @@ export const movieData: Movie[] = [
         genres: ["Youth", "Comedy"],
         description: "Follow a group of freshmen as they navigate friendship, exams, and first loves in their first year of college.",
         rating: "4.5",
-        duration: "12m"
+        duration: "12m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "7",
@@ -70,7 +77,8 @@ export const movieData: Movie[] = [
         genres: ["Music", "Drama"],
         description: "A shy street musician goes viral overnight but struggles to handle the sudden fame and pressure.",
         rating: "4.8",
-        duration: "16m"
+        duration: "16m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     },
     {
         id: "8",
@@ -79,6 +87,7 @@ export const movieData: Movie[] = [
         genres: ["Business", "Inspiration"],
         description: "Three college dropouts try to pitch their crazy app idea to investors in Silicon Valley with only 24 hours to prepare.",
         rating: "4.7",
-        duration: "20m"
+        duration: "20m",
+        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
     }
 ];

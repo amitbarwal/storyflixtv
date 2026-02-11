@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Check, Crown, Play, Star, Zap, Shield, Users, Clock } from 'lucide-react';
+import { Check, Crown, Play, Star, Zap, Shield, Clock } from 'lucide-react';
 import { movieData } from '@/lib/movieData';
-import type { Metadata } from 'next';
+
 
 
 export default function VipPage() {
