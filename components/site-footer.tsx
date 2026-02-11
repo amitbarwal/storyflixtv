@@ -6,7 +6,7 @@ export function SiteFooter() {
 
     return (
         <footer className="bg-black/40 border-t border-white/5 backdrop-blur-lg mt-auto">
-            <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand Column */}
                     <div className="space-y-4 col-span-1 md:col-span-1">
@@ -62,7 +62,7 @@ export function SiteFooter() {
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>&copy; 2026 StoryFlix TV. Design by Next Gen Agency</p>
+                    <p>&copy; {currentYear} StoryFlix TV. Design by Next Gen Agency</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
                         <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>

@@ -60,7 +60,7 @@ export default function MembershipPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-zinc-950 text-white py-20 px-6 relative overflow-hidden">
+        <div className="min-h-screen bg-zinc-950 text-white py-8 md:py-16 px-4 md:px-6 relative overflow-hidden">
 
             {/* Background Gradients */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] -z-10" />
@@ -73,20 +73,20 @@ export default function MembershipPage() {
                         <Crown className="w-3 h-3 mr-2 fill-yellow-500" />
                         Premium Access
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+                    <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight">
                         StoryFlix TV <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">VIP Membership</span>
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto">
                         Unlock unlimited entertainment. Choose the plan that fits your viewing style.
                     </p>
                 </div>
 
                 {/* Plans Grid */}
-                <div className="grid md:grid-cols-3 gap-8 items-start">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
                     {plans.map((plan) => (
                         <div
                             key={plan.name}
-                            className={`relative rounded-3xl p-8 backdrop-blur-sm border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${plan.popular ? 'bg-zinc-900/80 shadow-indigo-500/20 scale-105 z-10 border-indigo-500' : 'bg-white/5 border-white/10 hover:border-white/20'}`}
+                            className={`relative rounded-3xl p-5 md:p-8 backdrop-blur-sm border transition-all duration-300 md:hover:-translate-y-2 hover:shadow-2xl ${plan.popular ? 'bg-zinc-900/80 shadow-indigo-500/20 md:scale-105 z-10 border-indigo-500' : 'bg-white/5 border-white/10 hover:border-white/20'}`}
                         >
                             {plan.popular && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
@@ -96,7 +96,7 @@ export default function MembershipPage() {
 
                             <div className="space-y-6">
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-100">{plan.name}</h3>
+                                    <h3 className="text-lg md:text-2xl font-bold text-gray-100">{plan.name}</h3>
                                     <p className="text-sm text-gray-400 mt-1">{plan.description}</p>
                                 </div>
 
@@ -130,17 +130,17 @@ export default function MembershipPage() {
                 <div className="grid md:grid-cols-3 gap-6 pt-12 border-t border-white/5 text-center">
                     <div className="space-y-2">
                         <div className="flex justify-center text-indigo-400"><Zap className="w-6 h-6" /></div>
-                        <h4 className="font-bold">Instant Activation</h4>
+                        <h4 className="text-lg md:text-xl font-bold">Instant Activation</h4>
                         <p className="text-sm text-gray-500">Start watching immediately after payment.</p>
                     </div>
                     <div className="space-y-2">
                         <div className="flex justify-center text-purple-400"><Star className="w-6 h-6" /></div>
-                        <h4 className="font-bold">Premium Quality</h4>
+                        <h4 className="text-lg md:text-xl font-bold">Premium Quality</h4>
                         <p className="text-sm text-gray-500">4K Ultra HD streaming available.</p>
                     </div>
                     <div className="space-y-2">
                         <div className="flex justify-center text-pink-400"><Check className="w-6 h-6" /></div>
-                        <h4 className="font-bold">Cancel Anytime</h4>
+                        <h4 className="text-lg md:text-xl font-bold">Cancel Anytime</h4>
                         <p className="text-sm text-gray-500">No long-term commitments required.</p>
                     </div>
                 </div>

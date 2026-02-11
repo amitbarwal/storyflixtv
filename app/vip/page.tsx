@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Check, Crown, Play, Star, Zap, Shield, Users, Clock } from 'lucide-react';
+import { Check, Crown, Play, Star, Zap, Shield, Clock } from 'lucide-react';
 import { movieData } from '@/lib/movieData';
-import type { Metadata } from 'next';
+
 
 
 export default function VipPage() {
@@ -38,7 +38,7 @@ export default function VipPage() {
                             <span className="text-xs font-semibold tracking-wide text-green-400 uppercase">Trusted by 1 Crore+ Users</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-500 drop-shadow-2xl">
+                        <h1 className="text-2xl md:text-4xl font-black tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-500 drop-shadow-2xl">
                             Unlock Premium <br />
                             <span className="text-yellow-500">Entertainment</span>
                         </h1>
@@ -77,13 +77,13 @@ export default function VipPage() {
                                 <Star key={s} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                             ))}
                         </div>
-                        <p className="text-lg font-bold text-white">4.9/5 Rating</p>
-                        <p className="text-sm text-gray-400">by 1 Crore+ Happy Viewers</p>
+                        <p className="text-base md:text-lg font-bold text-white">4.9/5 Rating</p>
+                        <p className="text-xs md:text-sm text-gray-400">by 1 Crore+ Happy Viewers</p>
                     </div>
 
                     {/* Features List */}
                     <div className="w-full space-y-3">
-                        <h3 className="text-lg font-bold text-center mb-4 text-gray-200">Premium Benefits</h3>
+                        <h3 className="text-lg md:text-2xl font-bold text-center mb-4 text-gray-200">Premium Benefits</h3>
 
                         {[
                             { text: "Unlimited Viewing", icon: Play, color: "text-blue-400" },
@@ -95,7 +95,7 @@ export default function VipPage() {
                                 <div className={`p-2 rounded-full bg-white/5 ${feature.color}`}>
                                     <feature.icon className="w-5 h-5" />
                                 </div>
-                                <span className="font-semibold text-gray-100">{feature.text}</span>
+                                <span className="text-sm md:text-base font-semibold text-gray-100">{feature.text}</span>
                                 <Check className="w-5 h-5 text-green-500 ml-auto" />
                             </div>
                         ))}

@@ -33,7 +33,7 @@ export default function Home() {
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-gray-950 to-gray-950 text-white selection:bg-indigo-500/30 pb-20">
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-16 px-4 md:px-6 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8 animate-in fade-in slide-in-from-bottom-5 duration-700">
 
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium backdrop-blur-sm mx-auto">
@@ -41,14 +41,14 @@ export default function Home() {
             <span className="tracking-wide uppercase text-xs font-bold">New Releases Live</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+          <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight">
             Instant Entertainment, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
               Anytime, Anywhere!
             </span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Stream high-quality short movies, web series, and exclusive originals.
             Bite-sized entertainment designed for your busy lifestyle.
           </p>
@@ -73,21 +73,21 @@ export default function Home() {
       </section>
 
       {/* Featured Moves Section */}
-      <section className="py-12 px-6">
+      <section className="py-6 md:py-10 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-indigo-500/20 rounded-lg">
                 <Film className="w-6 h-6 text-indigo-400" />
               </div>
-              <h2 className="text-3xl font-bold text-white">Featured Movies</h2>
+              <h2 className="text-xl md:text-3xl font-bold text-white">Featured Movies</h2>
             </div>
             <a href="#" className="hidden sm:inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors">
               View All <TrendingUp className="w-4 h-4 ml-1" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-6">
             {featuredMovies.map((movie, i) => (
               <MovieCard
                 key={i}
@@ -101,21 +101,21 @@ export default function Home() {
       </section>
 
       {/* Must Watch Section */}
-      <section className="py-12 px-6">
+      <section className="py-6 md:py-10 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-pink-500/20 rounded-lg">
                 <Star className="w-6 h-6 text-pink-400 fill-pink-400/20" />
               </div>
-              <h2 className="text-3xl font-bold text-white">Must Watch</h2>
+              <h2 className="text-xl md:text-3xl font-bold text-white">Must Watch</h2>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-6">
             {mustWatch.map((movie, i) => (
               <div key={i} className="group relative">
-                <div className="aspect-[16/9] sm:aspect-[2/3] relative rounded-2xl overflow-hidden glass-card transition-all duration-300 group-hover:-translate-y-2  group-hover:shadow-pink-500/20 border-white/5">
+                <div className="aspect-[2/3] relative rounded-2xl overflow-hidden glass-card transition-all duration-300 group-hover:-translate-y-2  group-hover:shadow-pink-500/20 border-white/5">
                   <Image
                     src={movie.image}
                     alt={movie.title}
