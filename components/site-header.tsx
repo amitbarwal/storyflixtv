@@ -2,12 +2,24 @@
 
 import Link from 'next/link';
 import { Menu, Search, X, Crown } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 
 
 export function SiteHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Lock body scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuOpen]);
 
     const navLinks = [
         { name: 'Home', href: '/' },
@@ -19,9 +31,9 @@ export function SiteHeader() {
 
     return (
         <header className="fixed top-0 w-full z-50 glass border-b border-white/5">
-            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-bold tracking-tighter cursor-pointer z-50">
+                <Link href="/" className="text-2xl font-bold tracking-tighter cursor-pointer">
                     <span className="text-white">StoryFlix</span><span className="text-blue-500">TV</span>
                 </Link>
 
@@ -58,47 +70,50 @@ export function SiteHeader() {
                         </Button>
                     </Link>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2 text-gray-300 hover:text-white transition-colors z-50"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    >
-                        {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                    </button>
+                    {/* Mobile Menu Button - Only visible when menu is closed */}
+                    {!isMenuOpen && (
+                        <button
+                            className="md:hidden p-2 text-gray-300 hover:text-white transition-colors"
+                            onClick={() => setIsMenuOpen(true)}
+                            aria-label="Open menu"
+                        >
+                            <Menu className="w-6 h-6" />
+                        </button>
+                    )}
                 </div>
             </div>
 
-            {/* Mobile Navigation Overlay */}
-            {/* Mobile Navigation Backdrop */}
+            {/* Mobile Navigation Overlay - Full Screen */}
             <div
-                className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-opacity duration-300 md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-                onClick={() => setIsMenuOpen(false)}
-            />
+                className={`fixed inset-0 bg-gray-950 z-[100] transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center justify-center space-y-8 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                    }`}
+                aria-hidden={!isMenuOpen}
+            >
+                {/* Close Button Inside Overlay */}
+                <button
+                    className="absolute top-6 right-6 p-2 text-gray-300 hover:text-white transition-colors bg-white/10 rounded-full"
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-label="Close menu"
+                >
+                    <X className="w-8 h-8" />
+                </button>
 
-            {/* Mobile Navigation Drawer */}
-            {/* Mobile Navigation Drawer */}
-            <div className={`fixed top-0 right-0 h-[100dvh] w-[280px] bg-gray-950 border-l border-white/10 shadow-2xl z-40 transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-6 space-y-6 overflow-y-auto ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                {navLinks.map((link) => (
+                {[
+                    { name: 'Home', href: '/' },
+                    { name: 'Movies', href: '/movies' },
+                    { name: 'About Us', href: '/about' },
+                    { name: 'Contact Us', href: '/contact' },
+                    { name: 'Membership', href: '/membership' },
+                ].map((link) => (
                     <Link
                         key={link.name}
                         href={link.href}
-                        className="text-lg font-medium text-gray-300 hover:text-white hover:pl-2 transition-all border-b border-white/5 pb-2 flex items-center justify-between group flex-shrink-0"
+                        className="text-3xl font-bold text-white hover:text-blue-500 transition-colors tracking-tight"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         {link.name}
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                     </Link>
                 ))}
-
-                {/* Mobile Membership Button */}
-                <div className="sm:hidden pt-4 pb-8 flex-shrink-0">
-                    <Link href="/membership" onClick={() => setIsMenuOpen(false)}>
-                        <Button className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-none h-12">
-                            <Crown className="w-4 h-4 mr-2" />
-                            Join Membership
-                        </Button>
-                    </Link>
-                </div>
             </div>
         </header>
     );
