@@ -30,7 +30,7 @@ export function SiteHeader() {
     ];
 
     return (
-        <header className="fixed top-0 w-full z-50 glass border-b border-white/5">
+        <header className={`fixed top-0 w-full z-50 border-b border-zinc-800 transition-colors duration-300 ${isMenuOpen ? 'bg-[#050505]' : 'bg-[#050505]'}`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold tracking-tighter cursor-pointer">
