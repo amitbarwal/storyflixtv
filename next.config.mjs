@@ -8,6 +8,30 @@ const nextConfig = {
             },
         ],
     },
+    async redirects() {
+        return [
+            {
+                source: '/about',
+                destination: '/about-us',
+                permanent: true,
+            },
+            {
+                source: '/contact',
+                destination: '/contact-us',
+                permanent: true,
+            },
+            {
+                source: '/terms',
+                destination: '/terms-of-service',
+                permanent: true,
+            },
+            {
+                source: '/movie',
+                destination: '/movies',
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;

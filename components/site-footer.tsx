@@ -29,8 +29,9 @@ export function SiteFooter() {
                         <h4 className="font-semibold mb-6 text-white text-lg">Quick Links</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-                            <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
+                            <li><Link href="/about-us" className="hover:text-blue-400 transition-colors">About Us</Link></li>
                             <li><Link href="/movies" className="hover:text-blue-400 transition-colors">Movies</Link></li>
+                            <li><Link href="/membership" className="hover:text-blue-400 transition-colors">Membership</Link></li>
                         </ul>
                     </div>
 
@@ -38,9 +39,9 @@ export function SiteFooter() {
                     <div>
                         <h4 className="font-semibold mb-6 text-white text-lg">Legal</h4>
                         <ul className="space-y-3 text-sm text-gray-400">
-                            <li><Link href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+                            <li><Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
                             <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="/cookie-policy" className="hover:text-blue-400 transition-colors">Cookie Policy</Link></li>
+                            <li><Link href="/contact-us" className="hover:text-blue-400 transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -62,10 +63,10 @@ export function SiteFooter() {
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>&copy; {currentYear} StoryFlix TV. Design by Next Gen Agency</p>
+                    <p suppressHydrationWarning>&copy; {currentYear} StoryFlix TV. Design by Next Gen Agency</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
-                        <Link href="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
+                        <Link href="/terms-of-service" className="hover:text-gray-300 transition-colors">Terms</Link>
                     </div>
                 </div>
             </div>

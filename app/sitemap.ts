@@ -7,10 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Core static routes
     const staticRoutes = [
         '',
-        '/about',
+        '/about-us',
         '/membership',
         '/movies',
-        '/terms',
+        '/terms-of-service',
         '/privacy-policy',
         '/vip',
     ].map((route) => ({
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Dynamic movie routes
     const movieRoutes = movieData.map((movie) => ({
-        url: `${baseUrl}/movie/${movie.id}`,
+        url: `${baseUrl}/movies/${movie.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.6,

@@ -25,8 +25,8 @@ export function SiteHeader() {
         { name: 'Home', href: '/' },
         { name: 'Movies', href: '/movies' },
         { name: 'Membership', href: '/membership' },
-        { name: 'About Us', href: '/about' },
-        { name: 'Terms', href: '/terms' },
+        { name: 'About Us', href: '/about-us' },
+        { name: 'Terms', href: '/terms-of-service' },
     ];
 
     return (
@@ -101,8 +101,8 @@ export function SiteHeader() {
                 {[
                     { name: 'Home', href: '/' },
                     { name: 'Movies', href: '/movies' },
-                    { name: 'About Us', href: '/about' },
-                    { name: 'Contact Us', href: '/contact' },
+                    { name: 'About Us', href: '/about-us' },
+                    { name: 'Contact Us', href: '/contact-us' },
                     { name: 'Membership', href: '/membership' },
                 ].map((link) => (
                     <Link
