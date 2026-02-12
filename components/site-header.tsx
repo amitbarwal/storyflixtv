@@ -83,23 +83,26 @@ export function SiteHeader() {
                 </div>
             </div>
 
-            {/* Mobile Navigation Overlay - Full Screen */}
+            {/* Mobile Navigation Sidebar */}
             <div
-                className={`fixed inset-0 w-full h-full bg-gradient-to-br from-gray-950 via-black to-gray-900 z-[100] transition-all duration-500 ease-in-out md:hidden flex flex-col items-center justify-center px-6 py-20 shadow-2xl overflow-hidden ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                className={`fixed top-0 right-0 h-full w-80 bg-gray-950 z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-2xl border-l border-white/10 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 aria-hidden={!isMenuOpen}
             >
-                {/* Close Button Inside Overlay */}
-                <button
-                    className="absolute top-6 right-6 p-3 text-gray-300 hover:text-white transition-all duration-200 bg-white/10 hover:bg-white/20 rounded-full shadow-lg active:scale-90"
-                    onClick={() => setIsMenuOpen(false)}
-                    aria-label="Close menu"
-                >
-                    <X className="w-7 h-7" />
-                </button>
+                {/* Sidebar Header */}
+                <div className="flex items-center justify-between p-6 border-b border-white/10">
+                    <h2 className="text-xl font-bold text-white">Menu</h2>
+                    <button
+                        className="p-2 text-gray-300 hover:text-white transition-colors bg-white/5 hover:bg-white/10 rounded-lg active:scale-90"
+                        onClick={() => setIsMenuOpen(false)}
+                        aria-label="Close menu"
+                    >
+                        <X className="w-6 h-6" />
+                    </button>
+                </div>
 
-                {/* Menu Items with Touch-Friendly Spacing */}
-                <nav className="flex flex-col items-center justify-center space-y-10 w-full max-w-md">
+                {/* Menu Items */}
+                <nav className="flex flex-col py-4">
                     {[
                         { name: 'Home', href: '/' },
                         { name: 'Movies', href: '/movies' },
@@ -111,11 +114,11 @@ export function SiteHeader() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-3xl font-bold text-white hover:text-indigo-400 transition-all duration-200 tracking-tight hover:scale-110 active:scale-95 py-2 px-4 w-full text-center"
+                            className="px-6 py-4 text-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 border-b border-white/5 active:bg-white/10"
                             onClick={() => setIsMenuOpen(false)}
                             style={{
                                 animationDelay: `${index * 50}ms`,
-                                animation: isMenuOpen ? 'slideInFromRight 0.4s ease-out forwards' : 'none'
+                                animation: isMenuOpen ? 'slideInFromRight 0.3s ease-out forwards' : 'none'
                             }}
                         >
                             {link.name}
@@ -124,12 +127,21 @@ export function SiteHeader() {
                 </nav>
             </div>
 
+            {/* Backdrop Overlay */}
+            {isMenuOpen && (
+                <div
+                    className="fixed inset-0 bg-black/60 z-[90] md:hidden transition-opacity duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-hidden="true"
+                />
+            )}
+
             {/* Animation Keyframes */}
             <style jsx>{`
                 @keyframes slideInFromRight {
                     from {
                         opacity: 0;
-                        transform: translateX(30px);
+                        transform: translateX(20px);
                     }
                     to {
                         opacity: 1;

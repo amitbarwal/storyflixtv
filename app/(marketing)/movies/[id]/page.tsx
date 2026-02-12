@@ -46,9 +46,9 @@ export default function MoviePage({ params }: MoviePageProps) {
         : movie.videoUrl;
 
     return (
-        <div className="min-h-screen bg-gray-950 text-white pb-20">
+        <div className="min-h-screen bg-gray-950 text-white pb-20 pt-20">
             {/* Hero Section with Video/Image */}
-            <div className="relative w-full aspect-video bg-black pt-16 sm:pt-0">
+            <div className="relative w-full aspect-video bg-black">
                 {isEmbed ? (
                     <iframe
                         src={`${finalVideoUrl}&playsinline=1`}
@@ -72,7 +72,7 @@ export default function MoviePage({ params }: MoviePageProps) {
                 {/* Back Button */}
                 <Link
                     href="/movies"
-                    className="absolute top-20 sm:top-4 left-4 md:left-8 z-20 p-2 bg-black/50 backdrop-blur-md rounded-full hover:bg-white/20 transition-colors"
+                    className="absolute top-4 left-4 md:left-8 z-20 p-2 bg-black/50 backdrop-blur-md rounded-full hover:bg-white/20 transition-colors"
                 >
                     <ArrowLeft className="w-6 h-6 text-white" />
                 </Link>
