@@ -8,7 +8,7 @@ export default function VipPage() {
             {/* Movie Grid Background */}
             <div className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none">
                 <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 md:gap-3 p-4 h-full overflow-hidden">
-                    {movieData.map((movie, index) => (
+                    {movieData.map((movie) => (
                         <div key={movie.id} className="relative aspect-[2/3] rounded-lg overflow-hidden">
                             <Image
                                 src={movie.imageUrl}
