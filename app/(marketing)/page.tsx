@@ -54,7 +54,7 @@ export default function Home() {
             <Link href="/membership" className="w-full sm:w-auto">
               <Button className="h-14 px-8 text-lg rounded-full w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 shadow-xl shadow-indigo-600/25 transition-all hover:scale-105">
                 <Play className="w-5 h-5 mr-3 fill-white" />
-                Start Free Membership
+                Start ₹2 Membership
               </Button>
             </Link>
 
