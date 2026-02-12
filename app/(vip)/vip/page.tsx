@@ -1,4 +1,4 @@
-import { Play, Star, ShieldCheck, Zap, TrendingUp, Trophy } from 'lucide-react';
+import { Star, ShieldCheck, Zap, TrendingUp, Trophy } from 'lucide-react';
 import { movieData } from '@/lib/movieData';
 import Image from 'next/image';
 
