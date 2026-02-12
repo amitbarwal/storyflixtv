@@ -59,7 +59,7 @@ export default function VipPage() {
                     {/* Unmute/Mute Toggle Button - Small & Discreet */}
                     <button
                         onClick={() => setIsMuted(!isMuted)}
-                        className="absolute bottom-4 right-4 z-30 flex items-center gap-1.5 bg-black/50 hover:bg-black/70 text-white px-3 py-1.5 rounded-full font-bold text-[10px] uppercase tracking-wider backdrop-blur-md transition-all hover:scale-105 active:scale-95 border border-white/10"
+                        className="absolute top-3 right-3 md:top-auto md:bottom-4 md:right-4 z-30 flex items-center gap-1.5 bg-black/60 hover:bg-black/80 text-white px-3 py-1.5 rounded-full font-bold text-[10px] uppercase tracking-wider backdrop-blur-md transition-all hover:scale-105 active:scale-95 border border-white/10 shadow-lg"
                     >
                         {isMuted ? (
                             <>
