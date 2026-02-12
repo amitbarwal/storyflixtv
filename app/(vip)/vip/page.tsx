@@ -1,8 +1,13 @@
-import { Star, ShieldCheck, Zap, TrendingUp, Trophy } from 'lucide-react';
+'use client';
+
+import { Star, ShieldCheck, Zap, TrendingUp, Trophy, Volume2, VolumeX } from 'lucide-react';
 import { movieData } from '@/lib/movieData';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function VipPage() {
+    const [isMuted, setIsMuted] = useState(true);
+
     return (
         <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 py-6 md:py-10 text-center overflow-hidden selection:bg-indigo-500/30">
             {/* Movie Grid Background */}
@@ -47,12 +52,31 @@ export default function VipPage() {
                     </p>
                 </header>
 
-                {/* 3. Video Core - No Play Button Overlay */}
-                <section className="w-[90%] md:w-full max-w-[700px] relative group">
-                    <div className="absolute -inset-1 md:-inset-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-[20px] md:rounded-[32px] blur-xl md:blur-2xl transition duration-1000 group-hover:opacity-100 opacity-50"></div>
+                {/* 3. Video Core - With Unmute Button */}
+                <section className="w-[95%] md:w-full max-w-[700px] relative group h-auto">
+                    <div className="absolute -inset-1 md:-inset-2 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-[20px] md:rounded-[32px] blur-xl md:blur-2xl transition duration-1000 group-hover:opacity-100 opacity-60"></div>
+
+                    {/* Unmute/Mute Toggle Button - High Visibility */}
+                    <button
+                        onClick={() => setIsMuted(!isMuted)}
+                        className="absolute -top-4 -right-2 md:-top-6 md:-right-6 z-30 flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 md:px-5 md:py-2.5 rounded-full font-black text-[10px] md:text-xs uppercase tracking-widest shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all hover:scale-110 active:scale-95 border border-white/20 animate-bounce cursor-pointer group/btn"
+                    >
+                        {isMuted ? (
+                            <>
+                                <VolumeX className="w-3 h-3 md:w-4 md:h-4 group-hover/btn:animate-pulse" />
+                                <span>Tap to Unmute</span>
+                            </>
+                        ) : (
+                            <>
+                                <Volume2 className="w-3 h-3 md:w-4 md:h-4" />
+                                <span>Muted</span>
+                            </>
+                        )}
+                    </button>
+
                     <div className="relative w-full aspect-video rounded-[16px] md:rounded-[32px] overflow-hidden bg-black border border-white/5 shadow-2xl">
                         <iframe
-                            src="https://www.youtube.com/embed/kntQeikX4r4?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=kntQeikX4r4&playsinline=1"
+                            src={`https://www.youtube.com/embed/kntQeikX4r4?autoplay=1&mute=${isMuted ? 1 : 0}&controls=0&modestbranding=1&rel=0&loop=1&playlist=kntQeikX4r4&playsinline=1`}
                             className="w-full h-full object-cover pointer-events-none scale-105"
                             title="StoryFlix TV VIP Preview"
                             allow="autoplay; encrypted-media"
