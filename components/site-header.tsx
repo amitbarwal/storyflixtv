@@ -85,15 +85,15 @@ export function SiteHeader() {
 
             {/* Mobile Navigation Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-80 bg-gray-950 z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-2xl border-l border-white/10 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 h-full w-80 bg-black z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-2xl border-l border-gray-800 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 aria-hidden={!isMenuOpen}
             >
                 {/* Sidebar Header */}
-                <div className="flex items-center justify-between p-6 border-b border-white/10">
+                <div className="flex items-center justify-between p-6 border-b border-gray-800">
                     <h2 className="text-xl font-bold text-white">Menu</h2>
                     <button
-                        className="p-2 text-gray-300 hover:text-white transition-colors bg-white/5 hover:bg-white/10 rounded-lg active:scale-90"
+                        className="p-2 text-gray-300 hover:text-white transition-colors bg-gray-800 hover:bg-gray-700 rounded-lg active:scale-90"
                         onClick={() => setIsMenuOpen(false)}
                         aria-label="Close menu"
                     >
@@ -114,7 +114,7 @@ export function SiteHeader() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="px-6 py-4 text-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 border-b border-white/5 active:bg-white/10"
+                            className="px-6 py-4 text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-900 transition-all duration-200 border-b border-gray-800 active:bg-gray-800"
                             onClick={() => setIsMenuOpen(false)}
                             style={{
                                 animationDelay: `${index * 50}ms`,
@@ -130,7 +130,7 @@ export function SiteHeader() {
             {/* Backdrop Overlay */}
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 bg-black/60 z-[90] md:hidden transition-opacity duration-300"
+                    className="fixed inset-0 bg-black z-[90] md:hidden transition-opacity duration-300"
                     onClick={() => setIsMenuOpen(false)}
                     aria-hidden="true"
                 />
