@@ -77,24 +77,24 @@ export function SiteHeader() {
 
             {/* Mobile Navigation Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-80 bg-black z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-2xl border-l border-gray-800 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 h-full w-80 bg-[#050505] z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-[-10px_0_30px_rgba(0,0,0,0.5)] border-l border-zinc-800 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 aria-hidden={!isMenuOpen}
             >
                 {/* Sidebar Header */}
-                <div className="flex items-center justify-between p-6 border-b border-gray-800">
-                    <h2 className="text-xl font-bold text-white">Menu</h2>
+                <div className="flex items-center justify-between p-6 border-b border-zinc-800 bg-[#0a0a0a]">
+                    <h2 className="text-xl font-bold text-white tracking-tight">Menu</h2>
                     <button
-                        className="p-2 text-gray-300 hover:text-white transition-colors bg-gray-800 hover:bg-gray-700 rounded-lg active:scale-90"
+                        className="p-2 text-zinc-400 hover:text-white transition-all bg-zinc-900 hover:bg-zinc-800 rounded-xl active:scale-95 flex items-center justify-center"
                         onClick={() => setIsMenuOpen(false)}
                         aria-label="Close menu"
                     >
-                        <X className="w-6 h-6" />
+                        <X className="w-5 h-5" />
                     </button>
                 </div>
 
                 {/* Menu Items */}
-                <nav className="flex flex-col py-4">
+                <nav className="flex flex-col py-2 divide-y divide-zinc-900">
                     {[
                         { name: 'Home', href: '/' },
                         { name: 'Movies', href: '/movies' },
@@ -106,7 +106,7 @@ export function SiteHeader() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="px-6 py-4 text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-900 transition-all duration-200 border-b border-gray-800 active:bg-gray-800"
+                            className="px-6 py-5 text-base font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-all duration-200 active:bg-zinc-800"
                             onClick={() => setIsMenuOpen(false)}
                             style={{
                                 animationDelay: `${index * 50}ms`,
@@ -119,7 +119,7 @@ export function SiteHeader() {
                 </nav>
             </div>
 
-            {/* Backdrop Overlay */}
+            {/* Backdrop Overlay - Fully Opaque */}
             {isMenuOpen && (
                 <div
                     className="fixed inset-0 bg-black z-[90] md:hidden transition-opacity duration-300"
