@@ -1,6 +1,5 @@
 import { Check, Zap, Shield, Star, Clock } from 'lucide-react';
 import { Metadata } from 'next';
-import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
     title: "Membership | StoryFlix TV",
@@ -116,14 +115,15 @@ export default function MembershipPage() {
                             </div>
 
                             <div className="mt-10">
-                                <Button
-                                    className={`w-full h-14 rounded-2xl font-bold text-lg transition-all active:scale-95 shadow-lg ${plan.isPopular
+                                <a
+                                    href="https://razorpay.com/"
+                                    className={`w-full h-14 rounded-2xl font-bold text-lg transition-all active:scale-95 shadow-lg flex items-center justify-center ${plan.isPopular
                                         ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/25'
                                         : 'bg-white text-black hover:bg-gray-200'
                                         }`}
                                 >
                                     {plan.buttonText}
-                                </Button>
+                                </a>
                             </div>
                         </div>
                     ))}

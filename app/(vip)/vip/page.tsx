@@ -91,12 +91,15 @@ export default function VipPage() {
 
                 {/* 5. CTA Button */}
                 <footer className="w-full pt-2 md:pt-3 space-y-3 md:space-y-4 pb-6">
-                    <button className="group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-3.5 rounded-full bg-indigo-600 text-white font-black text-sm md:text-base shadow-[0_15px_40px_-10px_rgba(79,70,229,0.5)] hover:bg-indigo-500 transition-all hover:scale-[1.02] active:scale-95 overflow-hidden ring-1 ring-white/20">
+                    <a
+                        href="https://razorpay.com/"
+                        className="group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-3.5 rounded-full bg-indigo-600 text-white font-black text-sm md:text-base shadow-[0_15px_40px_-10px_rgba(79,70,229,0.5)] hover:bg-indigo-500 transition-all hover:scale-[1.02] active:scale-95 overflow-hidden ring-1 ring-white/20 inline-flex items-center justify-center"
+                    >
                         <span className="relative z-10 flex items-center justify-center gap-2 tracking-tight uppercase">
-                            START FREE TRIAL
+                            Start ₹2 Membership
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine transition-all duration-1000" />
-                    </button>
+                    </a>
                     <div className="flex flex-wrap items-center justify-center gap-2 md:gap-6 text-gray-500 font-bold text-[8px] md:text-[10px] uppercase tracking-wider">
                         <span className="flex items-center gap-1">No Contracts</span>
                         <div className="w-1 h-1 rounded-full bg-indigo-600/30" />
