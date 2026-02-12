@@ -30,7 +30,7 @@ export function SiteHeader() {
     ];
 
     return (
-        <header className={`fixed top-0 w-full z-50 border-b border-zinc-800 transition-colors duration-300 ${isMenuOpen ? 'bg-[#050505]' : 'bg-[#050505]'}`}>
+        <header className={`fixed top-0 w-full z-50 border-b border-blue-900/30 transition-colors duration-300 ${isMenuOpen ? 'bg-[#0a0f1d]' : 'bg-[#0a0f1d]/95 backdrop-blur-md'}`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold tracking-tighter cursor-pointer">
@@ -52,11 +52,9 @@ export function SiteHeader() {
 
                 {/* Actions (Search + Mobile Menu) */}
                 <div className="flex items-center space-x-4">
-
-
                     {/* Join Membership Button */}
                     <Link href="/membership" className="hidden sm:block">
-                        <Button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white border-none h-10 px-6">
+                        <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-none h-10 px-6 shadow-lg shadow-blue-500/20">
                             <Crown className="w-4 h-4 mr-2" />
                             Join Membership
                         </Button>
@@ -77,15 +75,15 @@ export function SiteHeader() {
 
             {/* Mobile Navigation Sidebar */}
             <div
-                className={`fixed top-0 right-0 h-full w-80 bg-[#050505] z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-[-10px_0_30px_rgba(0,0,0,0.5)] border-l border-zinc-800 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 h-full w-80 bg-[#0a0f1d] z-[100] transition-transform duration-300 ease-in-out md:hidden shadow-[-10px_0_30px_rgba(0,0,0,0.5)] border-l border-blue-900/30 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
                 aria-hidden={!isMenuOpen}
             >
                 {/* Sidebar Header */}
-                <div className="flex items-center justify-between p-6 border-b border-zinc-800 bg-[#050505]">
+                <div className="flex items-center justify-between p-6 border-b border-blue-900/30 bg-[#0f172a]">
                     <h2 className="text-xl font-bold text-white tracking-tight">Menu</h2>
                     <button
-                        className="p-2 text-zinc-400 hover:text-white transition-all bg-zinc-900 hover:bg-zinc-800 rounded-xl active:scale-95 flex items-center justify-center"
+                        className="p-2 text-blue-300 hover:text-white transition-all bg-blue-900/20 hover:bg-blue-900/40 rounded-xl active:scale-95 flex items-center justify-center"
                         onClick={() => setIsMenuOpen(false)}
                         aria-label="Close menu"
                     >
@@ -94,7 +92,7 @@ export function SiteHeader() {
                 </div>
 
                 {/* Menu Items */}
-                <nav className="flex flex-col py-2 divide-y divide-zinc-900">
+                <nav className="flex flex-col py-2 divide-y divide-blue-900/20">
                     {[
                         { name: 'Home', href: '/' },
                         { name: 'Movies', href: '/movies' },
@@ -106,7 +104,7 @@ export function SiteHeader() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="px-6 py-5 text-base font-semibold text-zinc-300 hover:text-white hover:bg-zinc-900 transition-all duration-200 active:bg-zinc-800"
+                            className="px-6 py-5 text-base font-semibold text-gray-300 hover:text-white hover:bg-blue-900/20 transition-all duration-200 active:bg-blue-900/40"
                             onClick={() => setIsMenuOpen(false)}
                             style={{
                                 animationDelay: `${index * 50}ms`,
