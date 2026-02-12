@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Play, ChevronLeft, ChevronRight, Zap, Volume2, VolumeX } from 'lucide-react';
+import { Play, ChevronLeft, ChevronRight, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Movie } from '@/lib/movieData';
 import { getYouTubeEmbedUrl, getYouTubeId } from '@/lib/utils';
@@ -15,7 +15,6 @@ interface HeroSliderProps {
 export function HeroSlider({ movies }: HeroSliderProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [isMuted, setIsMuted] = useState(true);
 
     const nextSlide = useCallback(() => {
         if (isTransitioning) return;
@@ -38,23 +37,6 @@ export function HeroSlider({ movies }: HeroSliderProps) {
 
     return (
         <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-black">
-            {/* Global Unmute Button */}
-            <button
-                onClick={() => setIsMuted(!isMuted)}
-                className="absolute top-24 right-6 md:right-12 z-40 flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full font-black text-[10px] md:text-xs uppercase tracking-widest shadow-2xl transition-all hover:scale-110 active:scale-95 border border-white/10 group/unmute"
-            >
-                {isMuted ? (
-                    <>
-                        <VolumeX className="w-3 h-3 md:w-4 md:h-4 group-hover/unmute:animate-pulse" />
-                        <span>Tap to Unmute</span>
-                    </>
-                ) : (
-                    <>
-                        <Volume2 className="w-3 h-3 md:w-4 md:h-4" />
-                        <span>Mute</span>
-                    </>
-                )}
-            </button>
 
             {/* Slides */}
             <div className="relative h-full w-full">
@@ -75,7 +57,7 @@ export function HeroSlider({ movies }: HeroSliderProps) {
                                 {isActive && videoId && (
                                     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                                         <iframe
-                                            src={`${embedUrl}?autoplay=1&mute=${isMuted ? 1 : 0}&controls=0&modestbranding=1&rel=0&loop=1&playlist=${videoId}&playsinline=1&enablejsapi=1`}
+                                            src={`${embedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=${videoId}&playsinline=1&enablejsapi=1`}
                                             className="w-full h-full scale-[1.5] object-cover opacity-60"
                                             allow="autoplay; encrypted-media"
                                         />
