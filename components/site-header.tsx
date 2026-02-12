@@ -85,36 +85,58 @@ export function SiteHeader() {
 
             {/* Mobile Navigation Overlay - Full Screen */}
             <div
-                className={`fixed inset-0 bg-gray-950 z-[100] transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center justify-center space-y-8 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed inset-0 w-full h-full bg-gradient-to-br from-gray-950 via-black to-gray-900 z-[100] transition-all duration-500 ease-in-out md:hidden flex flex-col items-center justify-center px-6 py-20 shadow-2xl overflow-hidden ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                     }`}
                 aria-hidden={!isMenuOpen}
             >
                 {/* Close Button Inside Overlay */}
                 <button
-                    className="absolute top-6 right-6 p-2 text-gray-300 hover:text-white transition-colors bg-white/10 rounded-full"
+                    className="absolute top-6 right-6 p-3 text-gray-300 hover:text-white transition-all duration-200 bg-white/10 hover:bg-white/20 rounded-full shadow-lg active:scale-90"
                     onClick={() => setIsMenuOpen(false)}
                     aria-label="Close menu"
                 >
-                    <X className="w-8 h-8" />
+                    <X className="w-7 h-7" />
                 </button>
 
-                {[
-                    { name: 'Home', href: '/' },
-                    { name: 'Movies', href: '/movies' },
-                    { name: 'About Us', href: '/about-us' },
-                    { name: 'Contact Us', href: '/contact-us' },
-                    { name: 'Membership', href: '/membership' },
-                ].map((link) => (
-                    <Link
-                        key={link.name}
-                        href={link.href}
-                        className="text-3xl font-bold text-white hover:text-blue-500 transition-colors tracking-tight"
-                        onClick={() => setIsMenuOpen(false)}
-                    >
-                        {link.name}
-                    </Link>
-                ))}
+                {/* Menu Items with Touch-Friendly Spacing */}
+                <nav className="flex flex-col items-center justify-center space-y-10 w-full max-w-md">
+                    {[
+                        { name: 'Home', href: '/' },
+                        { name: 'Movies', href: '/movies' },
+                        { name: 'About Us', href: '/about-us' },
+                        { name: 'Contact Us', href: '/contact-us' },
+                        { name: 'Membership', href: '/membership' },
+                        { name: 'VIP', href: '/vip' },
+                    ].map((link, index) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="text-3xl font-bold text-white hover:text-indigo-400 transition-all duration-200 tracking-tight hover:scale-110 active:scale-95 py-2 px-4 w-full text-center"
+                            onClick={() => setIsMenuOpen(false)}
+                            style={{
+                                animationDelay: `${index * 50}ms`,
+                                animation: isMenuOpen ? 'slideInFromRight 0.4s ease-out forwards' : 'none'
+                            }}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                </nav>
             </div>
+
+            {/* Animation Keyframes */}
+            <style jsx>{`
+                @keyframes slideInFromRight {
+                    from {
+                        opacity: 0;
+                        transform: translateX(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+            `}</style>
         </header>
     );
 }
