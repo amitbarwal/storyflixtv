@@ -36,7 +36,7 @@ export function HeroSlider({ movies }: HeroSliderProps) {
     }, [nextSlide]);
 
     return (
-        <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-black">
+        <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-black pt-5">
 
             {/* Slides */}
             <div className="relative h-full w-full">
