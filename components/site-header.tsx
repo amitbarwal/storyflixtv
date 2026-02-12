@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, Search, X, Crown } from 'lucide-react';
+import { Menu, X, Crown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 
@@ -52,15 +52,7 @@ export function SiteHeader() {
 
                 {/* Actions (Search + Mobile Menu) */}
                 <div className="flex items-center space-x-4">
-                    {/* Search Bar - Hidden on small mobile */}
-                    <div className="hidden sm:flex items-center bg-white/5 hover:bg-white/10 rounded-full px-4 py-2 border border-white/5 focus-within:border-white/20 transition-all group">
-                        <Search className="w-4 h-4 text-gray-400 group-focus-within:text-white transition-colors" />
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="bg-transparent border-none focus:ring-0 text-sm ml-2 w-24 focus:w-40 transition-all placeholder-gray-500 text-white outline-none"
-                        />
-                    </div>
+
 
                     {/* Join Membership Button */}
                     <Link href="/membership" className="hidden sm:block">
