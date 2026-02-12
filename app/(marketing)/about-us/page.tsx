@@ -16,7 +16,7 @@ export default function AboutPage() {
                         Our Story
                     </h1>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        We&apos;re on a mission to redefine mobile entertainment with high-quality, bite-sized short movies and series.
+                        We&apos;re on a mission to redefine mobile entertainment with high-quality, bite-sized short dramas and series.
                     </p>
                 </div>
 

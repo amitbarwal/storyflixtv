@@ -15,7 +15,7 @@ export default function TermsPage() {
         },
         {
             title: "2. Intellectual Property",
-            content: "The content on StoryFlix TV, including movies, series, graphics, and software, is the property of StoryFlix TV and is protected by copyright and other intellectual property laws.",
+            content: "The content on StoryFlix TV, including dramas, series, graphics, and software, is the property of StoryFlix TV and is protected by copyright and other intellectual property laws.",
             icon: FileText
         },
         {

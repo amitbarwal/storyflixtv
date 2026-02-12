@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === '' ? 1 : 0.8,
     }));
 
-    // Dynamic movie routes
+    // Dynamic drama routes
     const movieRoutes = movieData.map((movie) => ({
         url: `${baseUrl}/movies/${movie.slug}`,
         lastModified: new Date(),

@@ -8,10 +8,10 @@ import { movieData } from '@/lib/movieData';
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Watch the latest short movies, web series, and reels. Instant entertainment on StoryFlix TV.",
+  description: "Watch the latest short dramas, web series, and reels. Instant entertainment on StoryFlix TV.",
   openGraph: {
     title: "Instant Entertainment, Anytime, Anywhere | StoryFlix TV",
-    description: "Watch high-quality short movies and series for just 2rs.",
+    description: "Watch high-quality short dramas and series for just 2rs.",
   }
 };
 
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Movies Section */}
+      {/* Featured Dramas Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-10">

@@ -14,7 +14,7 @@ export function SiteFooter() {
                             <span className="text-white">StoryFlix</span><span className="text-blue-500">TV</span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Your ultimate destination for short movies, web series, and premium entertainment.
+                            Your ultimate destination for short dramas, web series, and premium entertainment.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors"><Facebook className="w-5 h-5" /></a>
@@ -30,7 +30,7 @@ export function SiteFooter() {
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
                             <li><Link href="/about-us" className="hover:text-blue-400 transition-colors">About Us</Link></li>
-                            <li><Link href="/movies" className="hover:text-blue-400 transition-colors">Movies</Link></li>
+                            <li><Link href="/movies" className="hover:text-blue-400 transition-colors">Dramas</Link></li>
                             <li><Link href="/membership" className="hover:text-blue-400 transition-colors">Membership</Link></li>
                         </ul>
                     </div>
@@ -43,22 +43,6 @@ export function SiteFooter() {
                             <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
                             <li><Link href="/contact-us" className="hover:text-blue-400 transition-colors">Contact Us</Link></li>
                         </ul>
-                    </div>
-
-                    {/* Newsletter / Contact */}
-                    <div>
-                        <h4 className="font-semibold mb-6 text-white text-lg">Stay Updated</h4>
-                        <p className="text-gray-400 text-sm mb-4">Subscribe to our newsletter for the latest releases.</p>
-                        <div className="flex">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="bg-white/5 border border-white/10 rounded-l-md px-4 py-2 text-sm text-white focus:outline-none focus:border-blue-500 w-full"
-                            />
-                            <button className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-r-md text-sm font-medium transition-colors">
-                                Join
-                            </button>
-                        </div>
                     </div>
                 </div>
 

@@ -4,8 +4,8 @@ import { Film } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "All Movies | StoryFlix TV",
-    description: "Explore our collection of the latest movies, web series, and reels on StoryFlix TV.",
+    title: "All Dramas | StoryFlix TV",
+    description: "Explore our collection of the latest dramas, web series, and reels on StoryFlix TV.",
 };
 
 export default function MoviesPage() {
@@ -17,7 +17,7 @@ export default function MoviesPage() {
                         <Film className="w-8 h-8 text-indigo-400" />
                     </div>
                     <div>
-                        <h1 className="text-2xl md:text-4xl font-bold">All Movies</h1>
+                        <h1 className="text-2xl md:text-4xl font-bold">All Dramas</h1>
                         <p className="text-sm md:text-base text-gray-400 mt-1">Explore our complete collection of stories.</p>
                     </div>
                 </div>

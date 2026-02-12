@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: MoviePageProps): Promise<Meta
     const movie = movieData.find((m: Movie) => m.slug === params.id); // params.id holds the slug
     if (!movie) {
         return {
-            title: 'Movie Not Found',
+            title: 'Drama Not Found',
         };
     }
     return {

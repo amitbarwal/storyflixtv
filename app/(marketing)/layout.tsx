@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         default: "StoryFlix TV | Instant Entertainment",
         template: "%s | StoryFlix TV"
     },
-    description: "Watch high-quality short movies and series anytime, anywhere.",
+    description: "Watch high-quality short dramas and series anytime, anywhere.",
 };
 
 export default function MarketingLayout({
