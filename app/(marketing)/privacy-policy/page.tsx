@@ -10,22 +10,22 @@ export default function PrivacyPolicyPage() {
     const policies = [
         {
             title: "Data Collection",
-            content: "We collect information you provide directly to us, such as when you create an account, subscribe to our newsletter, or contact us for support. This may include your name, email address, and payment information.",
+            content: "We collect information you provide directly to us when you create an account, purchase a membership, or contact us for support. This includes your name, email address, payment details (processed securely by our payment partners), and any other information you choose to provide.",
             icon: Eye
         },
         {
             title: "Data Usage",
-            content: "We use the information we collect to provide, maintain, and improve our services, to process your transactions, and to communicate with you about StoryFlix TV.",
+            content: "We use your information to provide access to our dramas, process transactions, maintain your VIP account, and provide technical support. We also use data to analyze viewing patterns to improve our content curation.",
             icon: ShieldCheck
         },
         {
-            title: "Data Protection",
-            content: "We take reasonable measures to help protect information about you from loss, theft, misuse, and unauthorized access, disclosure, alteration, and destruction.",
+            title: "Data Security",
+            content: "Your security is our priority. We implement industry-standard encryption and security protocols to protect your personal data and payment information from unauthorized access or disclosure.",
             icon: Lock
         },
         {
-            title: "Your Choices",
-            content: "You may update, correct, or delete your account information at any time by logging into your account or contacting us. You can also opt out of receiving promotional communications from us.",
+            title: "Your Rights",
+            content: "You have the right to access, update, or request the deletion of your personal data at any time. You can manage your account settings directly or contact our privacy team for assistance.",
             icon: FileText
         }
     ];

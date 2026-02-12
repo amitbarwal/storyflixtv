@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/dramas',
         '/terms-of-service',
         '/privacy-policy',
+        '/refund-policy',
         '/vip',
     ].map((route) => ({
         url: `${baseUrl}${route}`,

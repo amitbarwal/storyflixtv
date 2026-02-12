@@ -41,6 +41,7 @@ export function SiteFooter() {
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li><Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
                             <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/refund-policy" className="hover:text-blue-400 transition-colors">Refund Policy</Link></li>
                             <li><Link href="/contact-us" className="hover:text-blue-400 transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
@@ -50,6 +51,7 @@ export function SiteFooter() {
                     <p suppressHydrationWarning>&copy; {currentYear} StoryFlix TV. Design by Next Gen Agency</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy</Link>
+                        <Link href="/refund-policy" className="hover:text-gray-300 transition-colors">Refund</Link>
                         <Link href="/terms-of-service" className="hover:text-gray-300 transition-colors">Terms</Link>
                     </div>
                 </div>
