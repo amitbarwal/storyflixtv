@@ -56,20 +56,20 @@ export default function VipPage() {
                 <section className="w-[95%] md:w-full max-w-[700px] relative group h-auto">
                     <div className="absolute -inset-1 md:-inset-2 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-[20px] md:rounded-[32px] blur-xl md:blur-2xl transition duration-1000 group-hover:opacity-100 opacity-60"></div>
 
-                    {/* Unmute/Mute Toggle Button - High Visibility */}
+                    {/* Unmute/Mute Toggle Button - Small & Discreet */}
                     <button
                         onClick={() => setIsMuted(!isMuted)}
-                        className="absolute -top-4 -right-2 md:-top-6 md:-right-6 z-30 flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 md:px-5 md:py-2.5 rounded-full font-black text-[10px] md:text-xs uppercase tracking-widest shadow-[0_10px_30px_rgba(37,99,235,0.4)] transition-all hover:scale-110 active:scale-95 border border-white/20 animate-bounce cursor-pointer group/btn"
+                        className="absolute bottom-4 right-4 z-30 flex items-center gap-1.5 bg-black/50 hover:bg-black/70 text-white px-3 py-1.5 rounded-full font-bold text-[10px] uppercase tracking-wider backdrop-blur-md transition-all hover:scale-105 active:scale-95 border border-white/10"
                     >
                         {isMuted ? (
                             <>
-                                <VolumeX className="w-3 h-3 md:w-4 md:h-4 group-hover/btn:animate-pulse" />
-                                <span>Tap to Unmute</span>
+                                <VolumeX className="w-3.5 h-3.5" />
+                                <span>Unmute</span>
                             </>
                         ) : (
                             <>
-                                <Volume2 className="w-3 h-3 md:w-4 md:h-4" />
-                                <span>Muted</span>
+                                <Volume2 className="w-3.5 h-3.5" />
+                                <span>Mute</span>
                             </>
                         )}
                     </button>
