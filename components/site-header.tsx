@@ -8,6 +8,21 @@ import { Button } from './ui/button';
 
 export function SiteHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Handle scroll for transparent header
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // Lock body scroll when menu is open
     useEffect(() => {
@@ -30,7 +45,10 @@ export function SiteHeader() {
     ];
 
     return (
-        <header className={`fixed top-0 w-full z-50 border-b border-blue-900/30 transition-colors duration-300 ${isMenuOpen ? 'bg-[#0a0f1d]' : 'bg-[#0a0f1d]/95 backdrop-blur-md'}`}>
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled || isMenuOpen
+                ? 'bg-[#0a0f1d] border-b border-blue-900/30'
+                : 'bg-transparent border-b border-transparent'
+            }`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold tracking-tighter cursor-pointer">
