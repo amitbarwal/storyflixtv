@@ -82,7 +82,7 @@ export function SiteHeader() {
                 aria-hidden={!isMenuOpen}
             >
                 {/* Sidebar Header */}
-                <div className="flex items-center justify-between p-6 border-b border-zinc-800 bg-[#0a0a0a]">
+                <div className="flex items-center justify-between p-6 border-b border-zinc-800 bg-[#050505]">
                     <h2 className="text-xl font-bold text-white tracking-tight">Menu</h2>
                     <button
                         className="p-2 text-zinc-400 hover:text-white transition-all bg-zinc-900 hover:bg-zinc-800 rounded-xl active:scale-95 flex items-center justify-center"
