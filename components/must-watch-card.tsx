@@ -40,7 +40,7 @@ export function MustWatchCard({ movie }: MustWatchCardProps) {
 
     return (
         <Link
-            href={`/movies/${movie.slug}`}
+            href={`/dramas/${movie.slug}`}
             className="group relative block"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

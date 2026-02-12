@@ -23,7 +23,7 @@ export function SiteHeader() {
 
     const navLinks = [
         { name: 'Home', href: '/' },
-        { name: 'Dramas', href: '/movies' },
+        { name: 'Dramas', href: '/dramas' },
         { name: 'Membership', href: '/membership' },
         { name: 'About Us', href: '/about-us' },
         { name: 'Terms', href: '/terms-of-service' },
@@ -95,7 +95,7 @@ export function SiteHeader() {
                 <nav className="flex flex-col py-2 divide-y divide-blue-900/20">
                     {[
                         { name: 'Home', href: '/' },
-                        { name: 'Dramas', href: '/movies' },
+                        { name: 'Dramas', href: '/dramas' },
                         { name: 'About Us', href: '/about-us' },
                         { name: 'Contact Us', href: '/contact-us' },
                         { name: 'Membership', href: '/membership' },

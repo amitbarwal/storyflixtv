@@ -52,7 +52,7 @@ export function MovieCard({ title, imageUrl, genres, slug, videoUrl }: MovieCard
 
     return (
         <Link
-            href={`/movies/${slug}`}
+            href={`/dramas/${slug}`}
             className="group relative cursor-pointer block w-full mx-auto"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

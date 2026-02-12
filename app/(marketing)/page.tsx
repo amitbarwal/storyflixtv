@@ -79,7 +79,7 @@ export default function Home() {
                 <p className="text-sm text-gray-500 hidden sm:block">Curated selection just for you</p>
               </div>
             </div>
-            <Link href="/movies" className="hidden sm:inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors group">
+            <Link href="/dramas" className="hidden sm:inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors group">
               View All <TrendingUp className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

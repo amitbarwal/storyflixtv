@@ -30,7 +30,7 @@ export function SiteFooter() {
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
                             <li><Link href="/about-us" className="hover:text-blue-400 transition-colors">About Us</Link></li>
-                            <li><Link href="/movies" className="hover:text-blue-400 transition-colors">Dramas</Link></li>
+                            <li><Link href="/dramas" className="hover:text-blue-400 transition-colors">Dramas</Link></li>
                             <li><Link href="/membership" className="hover:text-blue-400 transition-colors">Membership</Link></li>
                         </ul>
                     </div>

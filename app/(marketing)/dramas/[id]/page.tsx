@@ -71,7 +71,7 @@ export default function MoviePage({ params }: MoviePageProps) {
 
                 {/* Back Button */}
                 <Link
-                    href="/movies"
+                    href="/dramas"
                     className="absolute top-4 left-4 md:left-8 z-20 p-2 bg-black/50 backdrop-blur-md rounded-full hover:bg-white/20 transition-colors"
                 >
                     <ArrowLeft className="w-6 h-6 text-white" />

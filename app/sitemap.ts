@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '',
         '/about-us',
         '/membership',
-        '/movies',
+        '/dramas',
         '/terms-of-service',
         '/privacy-policy',
         '/vip',
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Dynamic drama routes
     const movieRoutes = movieData.map((movie) => ({
-        url: `${baseUrl}/movies/${movie.slug}`,
+        url: `${baseUrl}/dramas/${movie.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.6,

@@ -63,8 +63,8 @@ vercel --prod
 
 ### Generated Pages
 1. `/` - Home page
-2. `/movies` - Movies listing
-3. `/movies/[slug]` - Individual movie pages (14 movies)
+2. `/dramas` - Dramas listing
+3. `/dramas/[slug]` - Individual drama pages (14 dramas)
 4. `/membership` - Membership plans
 5. `/vip` - VIP landing page
 6. `/about-us` - About page

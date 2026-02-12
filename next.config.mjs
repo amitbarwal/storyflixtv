@@ -31,7 +31,7 @@ const nextConfig = {
             },
             {
                 source: '/movie',
-                destination: '/movies',
+                destination: '/dramas',
                 permanent: true,
             },
         ];
