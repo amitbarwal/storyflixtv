@@ -91,57 +91,57 @@ export const movieData: Movie[] = [
     },
     {
         id: "8",
-        title: "New Drama Title 8",
-        imageUrl: "/movies-cover/placeholder.jpg",
+        title: "Unexpected Boss",
+        imageUrl: "/movies-cover/Unexpected Boss.jpg",
         genres: ["Thriller"],
         description: "Update this description with the plot summary.",
         rating: "4.5",
         duration: "20m",
-        videoUrl: "https://youtube.com/watch?v=placeholder8",
-        slug: "new-drama-title-8"
+        videoUrl: "https://youtu.be/wKtVC_DMY98",
+        slug: "Unexpected-Boss"
     },
     {
         id: "9",
-        title: "New Drama Title 9",
-        imageUrl: "/movies-cover/placeholder.jpg",
+        title: "Never Judge Anyone",
+        imageUrl: "/movies-cover/Never Judge Anyone.jpg",
         genres: ["Family"],
         description: "Update this description with the plot summary.",
         rating: "4.5",
         duration: "20m",
-        videoUrl: "https://youtube.com/watch?v=placeholder9",
-        slug: "new-drama-title-9"
+        videoUrl: "https://youtu.be/etqkSP9Qhqk",
+        slug: "Never-Judge-Anyone"
     },
     {
         id: "10",
-        title: "New Drama Title 10",
-        imageUrl: "/movies-cover/placeholder.jpg",
+        title: "Beggar to Billionaire",
+        imageUrl: "/movies-cover/Beggar to Billionaire.jpg",
         genres: ["Action"],
         description: "Update this description with the plot summary.",
         rating: "4.5",
         duration: "20m",
-        videoUrl: "https://youtube.com/watch?v=placeholder10",
-        slug: "new-drama-title-10"
+        videoUrl: "https://youtu.be/GQGF3Yqrsf8",
+        slug: "Beggar-to-Billionaire"
     },
     {
         id: "11",
-        title: "New Drama Title 11",
-        imageUrl: "/movies-cover/placeholder.jpg",
+        title: "Self-Respect Revenge",
+        imageUrl: "/movies-cover/Self-Respect Revenge.jpg",
         genres: ["Comedy"],
         description: "Update this description with the plot summary.",
         rating: "4.5",
         duration: "20m",
-        videoUrl: "https://youtube.com/watch?v=placeholder11",
-        slug: "new-drama-title-11"
+        videoUrl: "https://youtu.be/_RH31WbMUbw",
+        slug: "Self-Respect Revenge"
     },
     {
         id: "12",
-        title: "New Drama Title 12",
-        imageUrl: "/movies-cover/placeholder.jpg",
+        title: "Underestimated Tycoon",
+        imageUrl: "/movies-cover/Underestimated Tycoon.jpg",
         genres: ["Drama"],
         description: "Update this description with the plot summary.",
         rating: "4.5",
         duration: "20m",
-        videoUrl: "https://youtube.com/watch?v=placeholder12",
-        slug: "new-drama-title-12"
+        videoUrl: "https://youtu.be/bU61ZvV5aSc",
+        slug: "Underestimated-Tycoon"
     }
 ];
