@@ -8,6 +8,8 @@ export interface Movie {
     rating?: string;
     duration?: string;
     slug: string;
+    teaserUrl?: string;
+    durationLimit?: number;
 }
 
 export const movieData: Movie[] = [
@@ -67,3 +69,56 @@ export const movieData: Movie[] = [
         slug: "princess-marry-to-poor-man"
     }
 ];
+
+// Helper to get all movies including localStorage ones
+// This needs to be called inside components or hooks (client-side only for localStorage)
+export function getAllMovies(): Movie[] {
+    if (typeof window === 'undefined') {
+        return movieData;
+    }
+
+    try {
+        const stored = localStorage.getItem('dramas');
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            // Map the parsed data to match Movie interface if needed
+            // The structure we saved matches mostly, but let's be safe
+            const dynamicMovies: Movie[] = parsed.map((d: any) => ({
+                id: d.id,
+                title: d.title,
+                imageUrl: d.coverImage || d.imageUrl, // Fallback for safety
+                videoUrl: d.fullVideoUrl || d.videoUrl, // Fallback for safety
+                genres: d.genres,
+                description: d.description,
+                rating: d.rating,
+                duration: d.duration,
+                slug: d.slug || d.id // Ensure slug exists
+            }));
+
+            // Filter out any duplicates if IDs conflict (prefer localStorage)
+            const staticIds = new Set(movieData.map(m => m.id));
+            const newMovies = dynamicMovies.filter(m => !staticIds.has(m.id));
+
+            return [...movieData, ...newMovies];
+        }
+    } catch (e) {
+        console.error("Error reading localStorage", e);
+    }
+
+    return movieData;
+}
+
+// Helper to get a single movie by slug (including dynamic ones)
+export function getMovieBySlug(slug: string): Movie | undefined {
+    // Try static first
+    const staticMovie = movieData.find(m => m.slug === slug);
+    if (staticMovie) return staticMovie;
+
+    // Try dynamic (client-side only)
+    if (typeof window !== 'undefined') {
+        const all = getAllMovies();
+        return all.find(m => m.slug === slug);
+    }
+
+    return undefined;
+}

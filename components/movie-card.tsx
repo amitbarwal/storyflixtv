@@ -74,13 +74,10 @@ export function MovieCard({ title, imageUrl, genres, slug, videoUrl }: MovieCard
                         />
                     </div>
                 ) : (
-                    <Image
+                    <img
                         src={imageUrl}
                         alt={title}
-                        fill
-                        className="object-cover transition-transform duration-700 md:group-hover:scale-110"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        priority={false}
+                        className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                     />
                 )}
 

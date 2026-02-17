@@ -1,25 +1,34 @@
+'use client';
+
 import { Star, Film, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import { MovieCard } from '@/components/movie-card';
 import { MustWatchCard } from '@/components/must-watch-card';
-import { movieData } from '@/lib/movieData';
-
-export const metadata: Metadata = {
-  title: "Home",
-  description: "Watch the latest short dramas, web series, and reels. Instant entertainment on StoryFlix TV.",
-  openGraph: {
-    title: "Instant Entertainment, Anytime, Anywhere | StoryFlix TV",
-    description: "Watch high-quality short dramas and series for just 2rs.",
-  }
-};
-
+import { movieData, getAllMovies } from '@/lib/movieData';
 import { HeroSlider } from '@/components/hero-slider';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const heroMovies = movieData.slice(0, 5);
-  const featuredMovies = movieData.slice(0, 5);
-  const mustWatch = movieData.slice(0, 4);
+  const [movies, setMovies] = useState(movieData);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Only run on client-side to access localStorage
+    setMovies(getAllMovies());
+    setMounted(true);
+  }, []);
+
+  // Use static data for SSR/initial render to match hydration, 
+  // then switch to dynamic data (including localStorage) after mount.
+  // We can also just use 'movies' directly but let's be careful about hydration mismatches.
+  // Actually, for simplicity and SEO, keeping initial static render is fine, 
+  // but let's show ALL movies once mounted.
+
+  const displayMovies = mounted ? movies : movieData;
+
+  const heroMovies = displayMovies.slice(0, 5);
+  const featuredMovies = displayMovies; // Show all on homepage for now, or slice if too many
+  const mustWatch = displayMovies.slice(0, 4);
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-950 text-white selection:bg-indigo-500/30">

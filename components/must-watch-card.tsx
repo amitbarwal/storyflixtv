@@ -59,12 +59,10 @@ export function MustWatchCard({ movie }: MustWatchCardProps) {
                         />
                     </div>
                 ) : (
-                    <Image
+                    <img
                         src={movie.imageUrl}
                         alt={movie.title}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                 )}
 
