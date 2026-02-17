@@ -65,5 +65,83 @@ export const movieData: Movie[] = [
         duration: "25m",
         videoUrl: "https://youtu.be/j19Cl-n6Keg",
         slug: "princess-marry-to-poor-man"
+    },
+    // New Placeholders (Update details manually)
+    {
+        id: "6",
+        title: "Silent Genius",
+        imageUrl: "/movies-cover/Silent Genius.jpg",
+        genres: ["Drama"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtu.be/pGj-Ye5xz4E",
+        slug: "Silent-Genius"
+    },
+    {
+        id: "7",
+        title: "Fighting For Life",
+        imageUrl: "/movies-cover/Fighting For Life.jpg",
+        genres: ["Romance"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtu.be/rPYvzF3yVTI",
+        slug: "Fighting-For-Life"
+    },
+    {
+        id: "8",
+        title: "New Drama Title 8",
+        imageUrl: "/movies-cover/placeholder.jpg",
+        genres: ["Thriller"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtube.com/watch?v=placeholder8",
+        slug: "new-drama-title-8"
+    },
+    {
+        id: "9",
+        title: "New Drama Title 9",
+        imageUrl: "/movies-cover/placeholder.jpg",
+        genres: ["Family"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtube.com/watch?v=placeholder9",
+        slug: "new-drama-title-9"
+    },
+    {
+        id: "10",
+        title: "New Drama Title 10",
+        imageUrl: "/movies-cover/placeholder.jpg",
+        genres: ["Action"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtube.com/watch?v=placeholder10",
+        slug: "new-drama-title-10"
+    },
+    {
+        id: "11",
+        title: "New Drama Title 11",
+        imageUrl: "/movies-cover/placeholder.jpg",
+        genres: ["Comedy"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtube.com/watch?v=placeholder11",
+        slug: "new-drama-title-11"
+    },
+    {
+        id: "12",
+        title: "New Drama Title 12",
+        imageUrl: "/movies-cover/placeholder.jpg",
+        genres: ["Drama"],
+        description: "Update this description with the plot summary.",
+        rating: "4.5",
+        duration: "20m",
+        videoUrl: "https://youtube.com/watch?v=placeholder12",
+        slug: "new-drama-title-12"
     }
 ];
