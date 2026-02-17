@@ -1,25 +1,14 @@
-'use client';
-
-import { movieData, getAllMovies } from '@/lib/movieData';
+import { movieData } from '@/lib/movieData';
 import { MovieCard } from '@/components/movie-card';
 import { Film } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Metadata } from 'next';
 
-// Metadata cannot be exported from 'use client' components in Next.js App Router
-// The layout.tsx metadata will apply, or we can use a wrapper if specific metadata is needed.
-// Given user constraints, we prioritize functionality.
+export const metadata: Metadata = {
+    title: "All Dramas | StoryFlix TV",
+    description: "Explore our collection of the latest dramas, web series, and reels on StoryFlix TV.",
+};
 
 export default function MoviesPage() {
-    const [movies, setMovies] = useState(movieData);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMovies(getAllMovies());
-        setMounted(true);
-    }, []);
-
-    const displayMovies = mounted ? movies : movieData;
-
     return (
         <div className="min-h-screen bg-gray-950 text-white pt-20 md:pt-28 pb-8 md:pb-16 px-4 md:px-6">
             <div className="max-w-7xl mx-auto">
@@ -34,7 +23,7 @@ export default function MoviesPage() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-6">
-                    {displayMovies.map((movie) => (
+                    {movieData.map((movie) => (
                         <MovieCard
                             key={movie.id}
                             id={movie.id}

@@ -1,37 +1,12 @@
 'use client';
 
-import { Star, ShieldCheck, Zap, TrendingUp, Trophy, Volume2, VolumeX, CheckCircle } from 'lucide-react';
+import { Star, ShieldCheck, Zap, TrendingUp, Trophy, Volume2, VolumeX } from 'lucide-react';
 import { movieData } from '@/lib/movieData';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function VipPage() {
     const [isMuted, setIsMuted] = useState(true);
-    const [isMember, setIsMember] = useState(false);
-    const router = useRouter();
-
-    useEffect(() => {
-        const storedMember = localStorage.getItem('isMember');
-        if (storedMember === 'true') {
-            setIsMember(true);
-        }
-    }, []);
-
-    const handleSubscribe = () => {
-        // Toggle logic for demo
-        const newStatus = !isMember;
-        localStorage.setItem('isMember', String(newStatus));
-        setIsMember(newStatus);
-
-        if (newStatus) {
-            alert("Congratulations! You are now a VIP member. Enjoy unlimited access!");
-            // Redirect to dramas page to watch content
-            router.push('/dramas');
-        } else {
-            alert("Membership cancelled. We hope to see you back soon!");
-        }
-    };
 
     return (
         <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 py-6 md:py-10 text-center overflow-hidden selection:bg-indigo-500/30">
@@ -67,9 +42,9 @@ export default function VipPage() {
                         Exclusive VIP Access
                     </div>
                     <h1 className="text-xl sm:text-2xl md:text-3xl font-black tracking-tight leading-tight text-white px-2">
-                        {isMember ? "You're a VIP Member!" : "Unlock Premium"} <br />
+                        Unlock Premium <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-500 to-purple-600">
-                            {isMember ? "Enjoy Unlimited Content" : "Entertainment for ₹2"}
+                            Entertainment for ₹2
                         </span>
                     </h1>
                     <p className="text-sm md:text-base text-gray-400 font-medium max-w-lg mx-auto leading-relaxed px-4">
@@ -138,26 +113,17 @@ export default function VipPage() {
                     ))}
                 </section>
 
-                {/* 5. CTA Button - Frontend Simulation */}
+                {/* 5. CTA Button */}
                 <footer className="w-full pt-2 md:pt-3 space-y-3 md:space-y-4 pb-6">
-                    <button
-                        onClick={handleSubscribe}
-                        className={`group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-3.5 rounded-full ${isMember ? 'bg-green-600 hover:bg-green-500' : 'bg-indigo-600 hover:bg-indigo-500'} text-white font-black text-sm md:text-base shadow-[0_15px_40px_-10px_rgba(79,70,229,0.5)] transition-all hover:scale-[1.02] active:scale-95 overflow-hidden ring-1 ring-white/20 inline-flex items-center justify-center cursor-pointer`}
+                    <a
+                        href="https://razorpay.com/"
+                        className="group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-3.5 rounded-full bg-indigo-600 text-white font-black text-sm md:text-base shadow-[0_15px_40px_-10px_rgba(79,70,229,0.5)] hover:bg-indigo-500 transition-all hover:scale-[1.02] active:scale-95 overflow-hidden ring-1 ring-white/20 inline-flex items-center justify-center"
                     >
                         <span className="relative z-10 flex items-center justify-center gap-2 tracking-tight uppercase">
-                            {isMember ? (
-                                <>
-                                    <CheckCircle className="w-5 h-5" />
-                                    Active Member (Click to Cancel)
-                                </>
-                            ) : (
-                                "Simulator: Activate VIP (₹2)"
-                            )}
+                            Start ₹2 Membership
                         </span>
-                        {!isMember && (
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine transition-all duration-1000" />
-                        )}
-                    </button>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine transition-all duration-1000" />
+                    </a>
                     <div className="flex flex-wrap items-center justify-center gap-2 md:gap-6 text-gray-500 font-bold text-[8px] md:text-[10px] uppercase tracking-wider">
                         <span className="flex items-center gap-1">No Contracts</span>
                         <div className="w-1 h-1 rounded-full bg-indigo-600/30" />
