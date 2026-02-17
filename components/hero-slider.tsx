@@ -2,11 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
-import { Play, Info, ChevronRight, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Play, Info } from 'lucide-react';
 import { Movie } from '@/lib/movieData';
 import { getYouTubeEmbedUrl, getYouTubeId } from '@/lib/utils';
-import { cn } from '@/lib/utils'; // Assuming cn exists, if not I'll handle it manually
 
 interface HeroSliderProps {
     movies: Movie[];
@@ -62,7 +60,7 @@ export function HeroSlider({ movies }: HeroSliderProps) {
     if (!movies || movies.length === 0) return null;
 
     return (
-        <section className="relative h-[90vh] md:h-[95vh] w-full overflow-hidden bg-black text-white group">
+        <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-black text-white group">
 
             {/* Main Slide Display */}
             <div className="relative h-full w-full">
@@ -120,8 +118,8 @@ export function HeroSlider({ movies }: HeroSliderProps) {
                                         </div>
                                     </div>
 
-                                    {/* Big Title */}
-                                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[0.9]">
+                                    {/* Medium Sized Title (Updated as requested) */}
+                                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight drop-shadow-2xl">
                                         {movie.title}
                                     </h1>
 
