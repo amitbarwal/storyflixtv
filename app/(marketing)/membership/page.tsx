@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function MembershipPage() {
     const plans = [
         {
-            name: "Monthly Plan",
+            name: "Basic Plan",
             price: "₹2",
             duration: "30 Days",
             features: [
@@ -19,10 +19,11 @@ export default function MembershipPage() {
                 "HD Streaming available"
             ],
             isPopular: false,
-            buttonText: "Buy Now"
+            buttonText: "Buy Now",
+            link: "https://rzp.io/rzp/WSO7Cwl9"
         },
         {
-            name: "Stantard Plan",
+            name: "Standard Plan",
             price: "₹499",
             duration: "60 Days",
             features: [
@@ -33,10 +34,11 @@ export default function MembershipPage() {
                 "Multi-device login"
             ],
             isPopular: true,
-            buttonText: "Buy Now"
+            buttonText: "Buy Now",
+            link: "#"
         },
         {
-            name: "Yearly Plan",
+            name: "Premium Plan",
             price: "₹1099",
             duration: "365 Days",
             features: [
@@ -47,7 +49,8 @@ export default function MembershipPage() {
                 "Priority Support"
             ],
             isPopular: false,
-            buttonText: "Buy Now"
+            buttonText: "Buy Now",
+            link: "#"
         }
     ];
 
@@ -116,7 +119,9 @@ export default function MembershipPage() {
 
                             <div className="mt-10">
                                 <a
-                                    href="https://razorpay.com/"
+                                    href={plan.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={`w-full h-14 rounded-2xl font-bold text-lg transition-all active:scale-95 shadow-lg flex items-center justify-center ${plan.isPopular
                                         ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/25'
                                         : 'bg-white text-black hover:bg-gray-200'
