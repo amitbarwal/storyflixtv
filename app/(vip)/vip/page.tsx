@@ -116,7 +116,7 @@ export default function VipPage() {
                 {/* 5. CTA Button */}
                 <footer className="w-full pt-2 md:pt-3 space-y-3 md:space-y-4 pb-6">
                     <a
-                        href="https://razorpay.com/"
+                        href="https://rzp.io/rzp/storyflixtv"
                         className="group relative w-full md:w-auto px-6 py-3 md:px-8 md:py-3.5 rounded-full bg-indigo-600 text-white font-black text-sm md:text-base shadow-[0_15px_40px_-10px_rgba(79,70,229,0.5)] hover:bg-indigo-500 transition-all hover:scale-[1.02] active:scale-95 overflow-hidden ring-1 ring-white/20 inline-flex items-center justify-center"
                     >
                         <span className="relative z-10 flex items-center justify-center gap-2 tracking-tight uppercase">

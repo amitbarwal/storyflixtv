@@ -20,7 +20,7 @@ export default function MembershipPage() {
             ],
             isPopular: false,
             buttonText: "Buy Now",
-            link: "https://rzp.io/rzp/WSO7Cwl9"
+            link: "https://rzp.io/rzp/storyflixtv"
         },
         {
             name: "Standard Plan",
